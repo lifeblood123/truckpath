@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://truckerpath.com/assets/components/jquery/jquery.min.js?70"></script>
+    <!-- <link rel="stylesheet" href="custom.css"> -->
+    <script src="custom.js"></script>
+  </head>
+
+  <body>
+    <style>
+      .tp-state-hide {
+        height: 180px;
+      }
+
+      #tp-state-block {
+        overflow: hidden;
+      }
+      #tp-state-block a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      #tp-state-block a:hover {
+        color: #0ba1ee;
+        text-decoration: underline;
+      }
+
+      .tp-state-item {
+        position: relative;
+        width: 210px;
+        float: left;
+        margin: 0 14px 20px;
+        box-sizing: border-box;
+      }
+
+      .tp-state-item span {
+        font-size: 16px;
+        font-weight: 700;
+        color: #141a42;
+        line-height: 1.6em;
+      }
+
+      .tp-state-item:hover span {
+        color: #005ee9;
+      }
+
+      .tp-button-container {
+        margin-left: 14px;
+        text-align: left;
+      }
+      .tp-button-content {
+        display: inline-block;
+        cursor: pointer;
+        color: #000;
+      }
+      .tp-button-content .more {
+        display: inline-block;
+      }
+      .tp-button-content .less {
+        display: none;
+      }
+      .tp-button-content span {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: 800;
+        color: #141a42;
+        height: 30px;
+        line-height: 30px;
+      }
+      .tp-button-content img {
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+      }
+      @media screen and (max-width: 736px) {
+        .tp-state-item {
+          width: 50%;
+          padding: 0 10px;
+          margin: 5px 0;
+          text-align: center;
+        }
+        .tp-button-container {
+          margin-left: 2px;
+          text-align: center;
+        }
+      }
+    </style>
+    <div id="tp-state-block" class="tp-state-block tp-state-hide">
+      <a
+        href="/locations/fuel-stops-near-me/alabama?country=usa&amp;state=Alabama&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Alabama</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/alaska?country=usa&amp;state=Alaska&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Alaska</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/arizona?country=usa&amp;state=Arizona&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Arizona</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/arkansas?country=usa&amp;state=Arkansas&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Arkansas</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/california?country=usa&amp;state=California&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>California</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/colorado?country=usa&amp;state=Colorado&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Colorado</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/connecticut?country=usa&amp;state=Connecticut&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Connecticut</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/delaware?country=usa&amp;state=Delaware&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Delaware</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/florida?country=usa&amp;state=Florida&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Florida</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/georgia?country=usa&amp;state=Georgia&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Georgia</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/hawaii?country=usa&amp;state=Hawaii&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Hawaii</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/idaho?country=usa&amp;state=Idaho&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Idaho</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/illinois?country=usa&amp;state=Illinois&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Illinois</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/indiana?country=usa&amp;state=Indiana&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Indiana</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/iowa?country=usa&amp;state=Iowa&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Iowa</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/kansas?country=usa&amp;state=Kansas&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Kansas</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/kentucky?country=usa&amp;state=Kentucky&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Kentucky</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/louisiana?country=usa&amp;state=Louisiana&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Louisiana</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/maine?country=usa&amp;state=Maine&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Maine</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/maryland?country=usa&amp;state=Maryland&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Maryland</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/massachusetts?country=usa&amp;state=Massachusetts&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Massachusetts</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/michigan?country=usa&amp;state=Michigan&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Michigan</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/minnesota?country=usa&amp;state=Minnesota&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Minnesota</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/mississippi?country=usa&amp;state=Mississippi&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Mississippi</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/missouri?country=usa&amp;state=Missouri&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Missouri</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/montana?country=usa&amp;state=Montana&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Montana</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/nebraska?country=usa&amp;state=Nebraska&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Nebraska</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/nevada?country=usa&amp;state=Nevada&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Nevada</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/new-hampshire?country=usa&amp;state=New Hampshire&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>New Hampshire</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/new-jersey?country=usa&amp;state=New Jersey&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>New Jersey</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/new-mexico?country=usa&amp;state=New Mexico&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>New Mexico</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/new-york?country=usa&amp;state=New York&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>New York</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/north-carolina?country=usa&amp;state=North Carolina&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>North Carolina</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/north-dakota?country=usa&amp;state=North Dakota&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>North Dakota</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/ohio?country=usa&amp;state=Ohio&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Ohio</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/oklahoma?country=usa&amp;state=Oklahoma&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Oklahoma</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/oregon?country=usa&amp;state=Oregon&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Oregon</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/pennsylvania?country=usa&amp;state=Pennsylvania&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Pennsylvania</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/rhode-island?country=usa&amp;state=Rhode Island&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Rhode Island</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/south-carolina?country=usa&amp;state=South Carolina&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>South Carolina</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/south-dakota?country=usa&amp;state=South Dakota&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>South Dakota</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/tennessee?country=usa&amp;state=Tennessee&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Tennessee</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/texas?country=usa&amp;state=Texas&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Texas</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/utah?country=usa&amp;state=Utah&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Utah</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/vermont?country=usa&amp;state=Vermont&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Vermont</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/virginia?country=usa&amp;state=Virginia&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Virginia</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/washington?country=usa&amp;state=Washington&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Washington</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/west-virginia?country=usa&amp;state=West Virginia&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>West Virginia</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/wisconsin?country=usa&amp;state=Wisconsin&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Wisconsin</span></a
+      ><a
+        href="/locations/fuel-stops-near-me/wyoming?country=usa&amp;state=Wyoming&amp;type=Fuel"
+        class="tp-state-item"
+        ><span>Wyoming</span></a
+      >
+    </div>
+    <div class="tp-button-container">
+      <div id="tp-button" class="tp-button-content tp-button-show">
+        <span class="more">More</span>
+        <span class="less">Less</span>
+        <img
+          class="more"
+          src="https://www.truckerpath.com/assets/img/tp-icon/ic-more.svg"
+          alt=""
+        />
+        <img
+          class="less"
+          src="	https://www.truckerpath.com/assets/img/tp-icon/ic-less.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <script>
+      function BindByDom() {
+        try {
+          var htmlBtn = document.getElementById("tp-button"); //获取HTMLCollection对象集合
+          //遍历集合，一个一个地设置点击事件
+          htmlBtn.onclick = function () {
+            var classList = document.querySelector("#tp-state-block").classList;
+            // container.
+            if (classList.contains("tp-state-hide")) {
+              classList.remove("tp-state-hide");
+            } else {
+              classList.add("tp-state-hide");
+            }
+          };
+        } catch (error) {}
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        BindByDom();
+      });
+    </script>
+  </body>
+</html>
