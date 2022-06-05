@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://truckerpath.com/assets/components/jquery/jquery.min.js?70"></script>
+  <style>
+    .tpweb-noscroll-truckpath {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hbspt-form-bg {
+      display: none;
+    }
+    @media screen and (max-width: 960px) {
+      .tpweb-noscroll-truckpath .hbspt-form-bg {
+        background-color: #fff !important;
+      }
+    }
+
+    .tpweb-noscroll-truckpath .hbspt-form-bg {
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: -ms-flexbox;
+      display: flex;
+      overflow: auto;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 960px) {
+      .tpweb-noscroll-truckpath .hbspt-form-bg .hbspt-form-container,
+      .tpweb-noscroll-truckpath .hbspt-form-bg .split {
+        width: 600px !important;
+      }
+
+      .tpweb-noscroll-truckpath .hbspt-form-bg .hbspt-form-container {
+        margin: 80px 0;
+        border-radius: 2px;
+      }
+
+      .tpweb-noscroll-truckpath .hbspt-form-bg .title {
+        width: 360px;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      .tpweb-noscroll-truckpath .hbspt-form-container,
+      .tpweb-noscroll-truckpath .split {
+        width: 100vw !important;
+      }
+
+      .tpweb-noscroll-truckpath .title {
+        width: 300px;
+      }
+    }
+
+    .tpweb-noscroll-truckpath .hbspt-form-container {
+      position: relative;
+      box-sizing: border-box;
+      padding: 113px 24px 0;
+      background-color: #fff;
+      z-index: 200;
+      -ms-flex-item-align: safe center;
+      -ms-grid-row-align: safe center;
+      align-self: safe center;
+    }
+
+    .tpweb-noscroll-truckpath .hbspt-form-container .title {
+      line-height: 24px;
+      font-weight: 600;
+      position: absolute;
+      left: 24px;
+      top: 24px;
+    }
+
+    .tpweb-noscroll-truckpath .hbspt-form-container .close {
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      cursor: pointer;
+    }
+
+    .tpweb-noscroll-truckpath .hbspt-form-container .split {
+      border-bottom: #e6e9ec solid 1px;
+      position: absolute;
+      left: 0;
+      top: 88px;
+    }
+
+    .tpweb-noscroll-truckpath .hbspt-form-container .hs-form-iframe {
+      background-color: #fff;
+    }
+
+    /* .tpweb-noscroll-truckpath * {
+      z-index: -1;
+    } */
+  </style>
+
+  <body>
+    <div class="hbspt-form-bg">
+      <div class="hbspt-form-container" id="hbspt-form-container">
+        <div class="title">
+          See how Trucker Path’s Dispatch can scale up your business
+        </div>
+        <svg
+          class="dispatch-close close"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <path d="M0 0h24v24H0z"></path>
+            <path
+              d="M17.586 4.986 19 6.4 13.4 12l5.728 5.728-1.414 1.414-5.729-5.728-5.713 5.714-1.414-1.414L10.57 12 4.986 6.414 6.4 5l5.585 5.586 5.6-5.6z"
+              fill="#7F8596"
+            ></path>
+          </g>
+        </svg>
+        <div class="split"></div>
+      </div>
+    </div>
+
+    <div class="dispatch-start">Get a Demo</div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://truckerpath.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+    id="jquery-core-js"
+  ></script>
+  <script
+    charset="utf-8"
+    type="text/javascript"
+    src="https://js.hsforms.net/forms/shell.js"
+  ></script>
+  <!--[if lte IE 8]><script charset=utf-8 type="text/javascript" src="//http://js.hsforms.net/forms/v2-legacy.js"></script><![endif] -->
+  <script
+    charset="utf-8"
+    type="text/javascript"
+    src="https://js.hsforms.net/forms/v2.js"
+  ></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      hbspt.forms.create({
+        region: "na1",
+        portalId: "6474818",
+        formId: "e865943a-6171-4dcd-8744-2c9bc2f85ac7",
+        target: "#hbspt-form-container",
+      }),
+        window.addEventListener("message", function (o) {
+          "hsFormCallback" === o.data.type &&
+            "onFormSubmitted" === o.data.eventName &&
+            document.body.classList.remove("tpweb-noscroll-truckpath");
+        }),
+        document
+          .getElementsByClassName("dispatch-close")[0]
+          .addEventListener("click", function () {
+            document.body.classList.remove("tpweb-noscroll-truckpath");
+          }),
+        document
+          .getElementsByClassName("dispatch-start")[0]
+          .addEventListener("click", function (e) {
+            if (e && e.preventDefault) {
+              e.preventDefault();
+            } else {
+              window.event.returnValue = false;
+            }
+            document.body.classList.add("tpweb-noscroll-truckpath");
+          });
+    });
+  </script>
+</html>
