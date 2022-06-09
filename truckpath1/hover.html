@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script
+      type="text/javascript"
+      src="https://truckerpath.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+      id="jquery-core-js"
+    ></script> -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+
+        .fullwidth {
+            background-color: #F6F6F6;
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans',Arial,sans-serif;
+    color: #606060;
+    font-size: 16px;
+    line-height: 1.6em;
+    font-weight: 400;
+}
+        .container_10 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 970px;
+    position: relative;
+}
+.index-tl .container_10 {
+    box-sizing: border-box;
+    padding: 75px 0 0;
+}
+
+.index-tl {
+                height: auto
+            }
+
+            .index-tl .container_10 {
+                box-sizing: border-box;
+                padding: 75px 0 0
+            }
+          .index-tl .index-tl-buttons .index-tl-button-brokers h3, .index-tl .index-tl-buttons .index-tl-button-brokers h3 *, .index-tl .index-tl-buttons .index-tl-button-carriers h3, .index-tl .index-tl-buttons .index-tl-button-carriers h3 *, .index-tl h2, .index-tl h2 * {
+    font-weight: 300;
+}
+            .index-tl h2 {
+                font-size: 44px;
+                color: #1D2E42;
+                font-family: 'Open Sans',Arial,sans-serif;
+  
+            }
+
+            .index-tl .index-tl-text {
+                width: 610px;
+                margin: 0 auto;
+                color: #606060;
+    font-size: 16px;
+    line-height: 1.6em;
+    font-weight: 400;
+            }
+
+            .index-tl .index-tl-buttons {
+                width: 100%;
+                clear: both;
+                display: block;
+                position: relative;
+                box-sizing: border-box;
+                padding: 18px 109px
+            }
+
+            .index-tl .index-tl-buttons:after {
+                clear: both;
+                display: block;
+                content: ""
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers,.index-tl .index-tl-buttons .index-tl-button-carriers {
+                position: relative;
+                display: block;
+                width: 362px;
+                float: left;
+                box-sizing: border-box;
+                padding: 18px 32px;
+                border-radius: 4px;
+                background-color: #F6F6F6;
+                transition: background-color .5s ease-out
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers h3,.index-tl .index-tl-buttons .index-tl-button-carriers h3 {
+                font-size: 22px;
+                color: #1D2E42;
+                display: block;
+                padding-bottom: 16px
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-description,.index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-description {
+                display: block;
+                margin-bottom: 14px
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation,.index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation *,.index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation,.index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation * {
+                font-size: 14px
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation .default-button,.index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation .default-button {
+                width: 190px;
+                height: 40px;
+                line-height: 2.8em
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation .learn-more,.index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation .learn-more {
+                display: none
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers:hover,.index-tl .index-tl-buttons .index-tl-button-carriers:hover {
+                background-color: #FFF
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-carriers {
+                margin-right: 14px
+            }
+
+            .index-tl .index-tl-buttons .index-tl-button-brokers {
+                margin-left: 14px
+            }
+
+            .index-tl .index-tl-art {
+                position: relative;
+                display: block;
+                width: 927px;
+                height: 467px;
+                margin: 0 auto;
+                overflow: hidden
+            }
+
+            .index-tl .index-tl-art .index-tl-web {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: relative;
+                background-image: url(https://www.truckerpath.com/assets/img/index/web-browser@2x.png);
+                background-repeat: 0 0;
+                background-size: 100% auto;
+                box-sizing: border-box;
+                padding: 0 1px;
+                z-index: 5
+            }
+
+            .index-tl .index-tl-art .index-tl-web img {
+                width: 925px;
+                position: absolute;
+                top: 45px;
+                left: 1
+            }
+
+            .index-tl .index-tl-art .index-tl-mobile {
+                width: 248px;
+                height: 379px;
+                position: absolute;
+                top: 89px;
+                left: 151px;
+                z-index: 9;
+                overflow: hidden
+            }
+
+            .index-tl .index-tl-art .index-tl-mobile img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0
+            }
+
+            .index-tl .index-tl-art .index-tl-mobile-carriers {
+                transition: opacity .3s ease-out,top .3s ease-out
+            }
+
+            .index-tl .index-tl-art .index-tl-web-brokers,.index-tl .index-tl-art .index-tl-web-carriers {
+                transition: opacity .3s ease-out
+            }
+
+            .index-tl .index-tl-art.index-tl-art-carriers .index-tl-mobile-carriers {
+                display: block;
+                top: 0;
+                opacity: 1;
+                z-index: 5
+            }
+
+            .index-tl .index-tl-art.index-tl-art-carriers .index-tl-web-carriers {
+                display: block;
+                z-index: 5;
+                opacity: 1
+            }
+
+            .index-tl .index-tl-art.index-tl-art-carriers .index-tl-web-brokers {
+                display: block;
+                z-index: 4;
+                opacity: 0;
+                transition: opacity .3s ease-out .3s
+            }
+
+            .index-tl .index-tl-art.index-tl-art-brokers .index-tl-mobile-carriers {
+                display: block;
+                top: 40px;
+                opacity: 0;
+                z-index: 4
+            }
+
+            .index-tl .index-tl-art.index-tl-art-brokers .index-tl-web-carriers {
+                display: block;
+                z-index: 4;
+                opacity: 0;
+                transition: opacity .3s ease-out .3s
+            }
+
+            .index-tl .index-tl-art.index-tl-art-brokers .index-tl-web-brokers {
+                display: block;
+                opacity: 1;
+                z-index: 5
+            }
+            .default-button {
+    width: 292px;
+    height: 62px;
+    display: inline-block;
+    background-color: #0A8DD1;
+    box-shadow: inset 0 -2px 0 0 #0873aa;
+    border-radius: 4px;
+    color: #FFF;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+.default-button:hover {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #0b97e0;
+    box-shadow: inset 0 -2px 0 0 #0980be;
+}
+/* 
+            .option-homepage .index-tl {
+                    padding-bottom: 0;
+                    display: block
+                }
+
+                .option-homepage .index-tl .container_10 {
+                    padding-bottom: 0
+                }
+
+                .option-homepage .index-tl h2 {
+                    font-size: 32px
+                }
+
+                .option-homepage .index-tl .index-tl-text {
+                    width: 100%
+                }
+
+                .option-homepage .index-tl .index-tl-art {
+                    display: none
+                }
+
+                .option-homepage .index-tl .index-tl-buttons {
+                    box-sizing: border-box;
+                    padding: 18px 0 0
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers {
+                    float: none;
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 0;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers.index-tl-button-brokers,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers.index-tl-button-brokers {
+                    background-image: url(https://www.truckerpath.com/assets/img/index/bg-brokers.jpg)
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers.index-tl-button-carriers,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers.index-tl-button-carriers {
+                    background-image: url(https://www.truckerpath.com/assets/img/index/bg-carriers.jpg)
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-button-container,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-button-container {
+                    box-sizing: border-box;
+                    padding: 110px 30px 30px;
+                    height: auto;
+                    width: 100%;
+                    background: linear-gradient(to bottom,rgba(0,0,0,.36) 30%,rgba(0,0,0,.8) 100%)
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers h3,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers h3 {
+                    font-size: 22px;
+                    color: #fff
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-description,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-description {
+                    display: block;
+                    margin-bottom: 14px;
+                    color: #fff
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation,.option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation *,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation * {
+                    font-size: 14px
+                }
+
+                .opinion-box .opinion-tab .opinion-author,.opinion-box .opinion-tab .opinion-author *,.opinion-box .opinion-tab .opinion-text {
+                    font-size: 16px
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation .app-store,.option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation .google-play,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation .app-store,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation .google-play {
+                    display: none;
+                    height: 40px;
+                    margin: 0 auto;
+                    background-size: auto 40px;
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    width: 131px
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation .google-play,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation .google-play {
+                    background-image: url(https://www.truckerpath.com/assets/img/index/icon-google-play-invert.svg)!important
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation .app-store,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation .app-store {
+                    background-image: url(https://www.truckerpath.com/assets/img/index/icon-app-store-invert@2x.png)!important
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers .index-tl-navigation .learn-more,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .index-tl-navigation .learn-more {
+                    display: block;
+                    margin-top: 16px;
+                    color: #fff
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-brokers,.option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers {
+                    margin-right: 0;
+                    margin-left: 0
+                }
+
+                .option-homepage .index-tl .index-tl-buttons .index-tl-button-carriers .default-button {
+                    display: none
+                } */
+
+    </style>
+    <script src="index.js"></script>
+  </head>
+  <body>
+      <div class="fullwidth index-tl">
+        <div class="container_10">
+            <h2>TruckLoads</h2>
+            <div class="index-tl-text">
+              TruckLoads by Trucker Path helps carriers and owner operators move
+              freight via our mobile application and web portal. Thousands of
+              qualified carriers are searching through our platform to move the loads
+              posted by hundreds of freight companies. We are here to match up the
+              two.
+            </div>
+            <div class="index-tl-buttons">
+              <div class="index-tl-button-carriers">
+                <div class="index-tl-button-container">
+                  <h3>For Carriers</h3>
+                  <span class="index-tl-description"
+                    >We aggregate loads from brokers, 3PLs, shippers, so you have
+                    access to all the freight available at your fingertips</span
+                  ><span class="index-tl-navigation"
+                    ><a
+                      data-mpevent="1006"
+                      href="/truckloads/free-load-board/"
+                      class="default-button"
+                      >Find Loads</a
+                    >
+                </div>
+              </div>
+              <div class="index-tl-button-brokers">
+                <div class="index-tl-button-container">
+                  <h3>For Brokers</h3>
+                  <span class="index-tl-description"
+                    >The best way to reach qualified carriers and get your freight
+                    covered efficiently and reliably</span
+                  ><span class="index-tl-navigation"
+                    ><a
+                      data-mpevent="1010"
+                      href="/truckloads/broker-load-board/"
+                      class="default-button"
+                      >Post Freight</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="index-tl-art index-tl-art-carriers">
+              <div class="index-tl-mobile">
+                <img
+                  class="index-tl-mobile-carriers"
+                  src="https://www.truckerpath.com/assets/img/index/tl-mobile-carriers@2x.png"
+                  alt=""
+                />
+              </div>
+              <div class="index-tl-web">
+                <img
+                  class="index-tl-web-brokers"
+                  src="https://www.truckerpath.com/assets/img/index/tl-web-brokers@2x.png"
+                  alt=""
+                /><img
+                  class="index-tl-web-carriers"
+                  src="https://www.truckerpath.com/assets/img/index/tl-web-carriers@2x.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+      </div>
+    <script>
+
+// var homepageHead = function() {
+//     homepageHead.$head = $(".index-head"),
+//     homepageHead.$buttonsTpp = $(".scroll-to-tpp", homepageHead.$head),
+//     homepageHead.$buttonsTl = $(".scroll-to-tl", homepageHead.$head),
+//     homepageHead.$buttons = homepageHead.$buttonsTpp.add(homepageHead.$buttonsTl),
+//     homepageHead.$tppPhone = $(".head-phone-ios", homepageHead.$head),
+//     homepageHead.$tp = $(".scroll-to-tp", homepageHead.$head),
+//     homepageHead.$cm = $(".scroll-to-tm", homepageHead.$head),
+//     homepageHead.$tlPhone = $(".head-phone-android", homepageHead.$head),
+//     homepageHead.$phones = homepageHead.$tppPhone.add(homepageHead.$tlPhone),
+//     homepageHead.duration = 280,
+//     homepageHead.$buttons.on("mouseenter", homepageHead.updateCover),
+
+
+//     homepageHead.$buttonsTpp.on("click", function() {
+//         $.scrollTo($(".index-tpp"), 600, {
+//             offset: -66
+//         })
+//     }),
+//     homepageHead.$buttonsTl.on("click", function() {
+//         $.scrollTo($(".index-tl"), 600, {
+//             offset: -66
+//         })
+//     }),
+//     homepageHead.$tp.on("click", function() {
+//         $.scrollTo($(".index-tp"), 600, {
+//             offset: -66
+//         })
+//     }),
+//     homepageHead.$cm.on("click", function() {
+//         $.scrollTo($(".index-cm-to"), 600, {
+//             offset: -66
+//         })
+//     })
+// };
+
+
+
+// homepageHead.updateCover = function() {
+//     if (homepageHead.$head.hasClass("head-phones-inaction"))
+//         return !1;
+//     $(this).hasClass("scroll-to-tpp") && homepageHead.$tlPhone.hasClass("head-phone-ztop") || $(this).hasClass("scroll-to-tl") && homepageHead.$tppPhone.hasClass("head-phone-ztop")
+// }
+// ,
+// homepageHead.updateCover.toSides = function(e) {
+//     homepageHead.$head.addClass("head-phones-inaction")
+// }
+// ,
+// homepageHead.updateCover.changeTo = function(e) {
+//     var a = "tpp" == e ? "tl" : "tpp";
+//     homepageHead.$phones.removeClass("head-phone-ztop"),
+//     homepageHead["$" + e + "Phone"].addClass("head-phone-ztop"),
+//     homepageHead.$tppPhone.animate({
+//         top: "tpp" == a ? "14px" : 0,
+//         left: "+=40px"
+//     }, homepageHead.duration),
+//     homepageHead.$tlPhone.animate({
+//         top: "tl" == a ? "14px" : 0,
+//         left: "-=40px"
+//     }, homepageHead.duration, function() {
+//         homepageHead.$head.removeClass("head-phones-inaction")
+//     })
+// }
+// ;
+
+
+// // homepageHead();
+
+// var homepageTruckloads = function() {
+//     homepageTruckloads.$tl = $(".index-tl"),
+//     homepageTruckloads.$buttons = $(".index-tl-buttons", homepageTruckloads.$tl),
+//     homepageTruckloads.$buttonsTlc = $(".index-tl-button-carriers", homepageTruckloads.$buttons),
+//     homepageTruckloads.$buttonsTlb = $(".index-tl-button-brokers", homepageTruckloads.$buttons),
+//     homepageTruckloads.$art = $(".index-tl-art", homepageTruckloads.$tl),
+//     homepageTruckloads.duration = 280,
+//     homepageTruckloads.markerCarriers = "index-tl-art-carriers",
+//     homepageTruckloads.markerBrokers = "index-tl-art-brokers",
+//     homepageTruckloads.$buttonsTlc.add(homepageTruckloads.$buttonsTlb).on("mouseenter", function() {
+//         $(this).hasClass("index-tl-button-carriers") ? homepageTruckloads.$art.removeClass("index-tl-art-brokers").addClass("index-tl-art-carriers") : homepageTruckloads.$art.removeClass("index-tl-art-carriers").addClass("index-tl-art-brokers")
+//     })
+// }
+//   , homepageCommand = function(e) {
+//     function a(e) {
+//         e !== d && ($(t[d]).removeClass("tab-active"),
+//         $(p[d]).removeClass("tab-active"),
+//         d = e,
+//         $(t[d]).addClass("tab-active"),
+//         $(p[d]).addClass("tab-active"))
+//     }
+//     var o = $(".index-cm")
+//       , t = $(".tab", o)
+//       , n = t.length
+//       , p = $(".tabs-content-container", o)
+//       , d = 0;
+//     e({
+//         ele: $(".animate-wrapper", o),
+//         moveleft: function(e) {
+//             e.preventDefault()
+//         },
+//         moveright: function(e) {
+//             e.preventDefault()
+//         },
+//         left: function(e) {
+//             e.preventDefault(),
+//             a((d + 1) % n)
+//         },
+//         right: function(e) {
+//             e.preventDefault(),
+//             a((d + n - 1) % n)
+//         }
+//     });
+//     for (var s = 0; s < n; s++)
+//         $(t[s]).mouseenter(a.bind(this, s))
+// }
+//   , indexOpinion = function(e) {
+//     e({
+//         onGo: function(e, a, o, t) {
+//             var n = t.duration;
+//             "mobile" === o ? (e.css({
+//                 "margin-top": "20px"
+//             }).animate({
+//                 "margin-top": "0"
+//             }, n),
+//             a.animate({
+//                 "margin-top": "20px"
+//             }, n)) : a.css({
+//                 "margin-top": "0"
+//             })
+//         },
+//         onSet: function(e, a, o, t) {
+//             "mobile" === o ? (e.css({
+//                 "margin-top": "0"
+//             }),
+//             setTimeout(function() {
+//                 a.css({
+//                     "margin-top": "20px"
+//                 })
+//             })) : a.css({
+//                 "margin-top": "0"
+//             })
+//         }
+//     })
+// };
+homepageTruckloads();
+
+    </script>
+  </body>
+</html>

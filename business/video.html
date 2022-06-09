@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://truckerpath.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script> -->
+    <script src="https://www.youtube.com/player_api"></script>
+    <script
+      type="text/javascript"
+      id="www-widgetapi-script"
+      src="https://www.youtube.com/s/player/966d033c/www-widgetapi.vflset/www-widgetapi.js"
+      async=""
+    ></script>
+    <script src="https://www.truckerpath.com/assets/js/tools/youtube-player.js?70"></script>
+    <script src="https://www.truckerpath.com/assets/js/tools/modal.js?70"></script>
+    <script src="https://www.truckerpath.com/assets/js/tools/modal-youtube.js?70"></script>
+    <style>
+      .wrapper {
+        width: 100%;
+      }
+      .wrapper_modal_active .modal_default,
+      .wrapper_modal_active .modal_video {
+        pointer-events: all;
+      }
+
+      .wrapper_modal {
+        box-sizing: border-box;
+        position: fixed;
+        overflow: scroll;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 13;
+        top: 100px;
+        left: 0;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      .wrapper_modal_active {
+        top: 0;
+        opacity: 1;
+        pointer-events: none;
+      }
+      .modal {
+        transition: all 0.5s;
+      }
+      .modal_video {
+        width: 616px;
+        height: 422px;
+        padding: 76px 0 0;
+      }
+
+      .modal__close {
+        width: 36px;
+        height: 36px;
+        background: url(https://www.truckerpath.com/assets/img/modal_close.png) no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 20px;
+        left: auto;
+        right: 20px;
+        cursor: pointer;
+        opacity: 0.5;
+      }
+
+
+
+      .modal_default,.shadow_fullscreen {
+                width: 100%;
+                top: 0;
+                pointer-events: none
+            }
+
+            .shadow_fullscreen {
+                height: 100%;
+                background: #000;
+                position: fixed;
+                left: 0;
+                z-index: 12;
+                opacity: 0
+            }
+
+            .modal_default {
+                position: absolute;
+                max-width: 616px;
+                height: auto;
+                left: -308px;
+                background: #fff;
+                margin-left: 50%;
+                z-index: 9999;
+                opacity: 1;
+                box-shadow: 0 0 2px 0rgba(0,0,0,.2);
+                border-radius: 14px;
+                box-sizing: border-box
+            }
+
+            .modal_video {
+                width: 616px;
+                height: 422px;
+                padding: 76px 0 0
+            }
+
+            .modal_bottom {
+                width: 100%;
+                z-index: 12;
+                position: fixed;
+                bottom: -50%;
+                background: #fff;
+                opacity: 0;
+                box-shadow: 0 -1px 0 0 rgba(0,0,0,.1);
+                text-align: center
+            }
+
+            .modal_bottom.active {
+                opacity: 1;
+                bottom: 0
+            }
+
+           
+
+      .video {
+        position: relative;
+        background: #000;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+      }
+
+      .wrapper_modal_active .modal_default,.wrapper_modal_active .modal_video {
+                pointer-events: all;
+
+            }
+            .modal_default, .toggle {
+    position: relative;
+}
+            @media screen and (max-width: 736px){
+      
+                .wrapper_modal {
+    padding: 28px 14px;
+    z-index: 10000;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+}
+.modal_default {
+    left: 0;
+    margin: 0 auto;
+    padding: 64px 0 0;
+}
+.modal_video {
+    width: 100%;
+    height: auto;
+}
+.modal_default,.modal_instapay .modal__content .btn {
+                    width: 100%;
+                    display: inline-block;
+                    box-sizing: border-box
+                }
+
+                .modal_default {
+                    left: 0;
+                    margin: 0 auto;
+                    padding: 64px 0 0
+                }
+
+            }
+
+    </style>
+  </head>
+  <body>
+    <div
+      onclick="gevent('Click on Watch Demo', 'Top Banner')"
+      id="video-1-trigger"
+      data-mpevent="1026"
+      class="button button-white left"
+      data-trigger="modal"
+      data-target="#video-1"
+      data-youtube-id="BjO1Z81cTrA"
+    >
+      Watch Demo
+    </div>
+
+    <div class="wrapper wrapper_modal">
+      <div
+        id="video-1"
+        class="modal modal_default modal_video js-modal active"
+        style="top: 255.5px"
+      >
+        <div class="modal__close js-modal-close"></div>
+        <div class="video"><div id="video-1-tv" class="video__tv"></div></div>
+        <!-- <div class="video" style="height: 214.312px">
+          <iframe
+            id="video-1-tv"
+            class="video__tv"
+            frameborder="0"
+            allowfullscreen="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            title="YouTube video player"
+            width="381"
+            height="214.3125"
+            src="https://www.youtube.com/embed/?autoplay=0&amp;autohide=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;controls=1&amp;disablekb=1&amp;enablejsapi=1&amp;iv_load_policy=1&amp;origin=https%3A%2F%2Fwww.truckerpath.com&amp;widgetid=1"
+          ></iframe>
+        </div> -->
+      </div>
+    </div>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-59796712-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-59796712-1");
+      function gevent(action, lable) {
+        gtag("event", action, {
+          event_label: lable,
+        });
+      }
+      function goToSignUp() {
+        window.open(
+          "https://businesslistings.truckerpath.com/auth/signup" +
+            window.location.search,
+          "_self"
+        );
+      }
+      gevent("TP Business Page View");
+    </script>
+  </body>
+</html>

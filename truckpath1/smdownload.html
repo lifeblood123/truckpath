@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script
+    <!-- <script
       type="text/javascript"
       src="https://truckerpath.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
       id="jquery-core-js"
-    ></script>
+    ></script> -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <style>
       .modal_default,
       .shadow_fullscreen {
@@ -66,7 +67,8 @@
       .modal__close {
         width: 36px;
         height: 36px;
-        background: url(http://truckerpath.com/wp-content/uploads/2022/06/modal_close.png) no-repeat;
+        background: url(http://truckerpath.com/wp-content/uploads/2022/06/modal_close.png)
+          no-repeat;
         background-size: cover;
         position: absolute;
         top: 20px;
@@ -579,7 +581,7 @@
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
-        background-image: url(/assets/img/loader-greybg-64.gif);
+        background-image: url(http://truckerpath.com/wp-content/uploads/2022/06/loader-greybg-64.gif);
       }
 
       .forms .forms-content .fields-box .field-item .field-item-container {
@@ -892,11 +894,9 @@
   </head>
   <body>
     <div class="dispatch-start" id="sms-modal-trigger">Get a Demo</div>
-    <div
-      class="shadow shadow_fullscreen js-modal-shadow"
-      style="opacity: 0.12"
-    ></div>
-    <div id="sms-modal" class="modal modal_bottom modal_center js-modal active">
+
+    <script>
+      var domstr = `<div id="sms-modal" class="modal modal_bottom modal_center js-modal">
       <div class="modal__close js-modal-close"></div>
       <div class="section section_sms-modal">
         <div class="send-sms forms">
@@ -931,13 +931,395 @@
             Example: +1 2223334455 or 2223334455
           </div>
           <div class="send-sms__success js-sms-success">
-            <img src="http://truckerpath.com/wp-content/uploads/2022/06/checkmark.png" />Link to download sent
-            successfully
+            <img
+              src="http://truckerpath.com/wp-content/uploads/2022/06/checkmark.png"
+            />Link to download sent successfully
           </div>
         </div>
       </div>
-    </div>
-    <script>
+    </div>`;
+      var formdom = jQuery(domstr);
+      formdom.appendTo(jQuery("body"));
+      var forms = function () {
+        (forms.$forms = $(".forms")),
+          (forms.callbacks = { success: null, error: null }),
+          forms.$forms.each(forms.initForm),
+          forms.alwaysWatch();
+      };
+      (forms.var = {
+        focusCheckSelector:
+          ".field-item-container.text input, .field-item-container.textarea textarea",
+        selectSelector: ".field-item-container.select select",
+        formSelector: "form.fields-box",
+        submitSelector: "form.fields-box .submit",
+        inprogressClass: "in-progress",
+        form: ".fields-box",
+        itemSelect: ".field-item",
+        itemSelectException: ":not(.field-button)",
+        type: {
+          select: {
+            selector: "select",
+            classContainer: "select",
+            elementView: "<span class='show-value'></span>",
+          },
+          text: {
+            selector: ":text",
+            classContainer: "text",
+            element: "<input type='text' />",
+          },
+          textarea: {
+            selector: "textarea",
+            classContainer: "textarea",
+            element: "<textarea></textarea>",
+          },
+          doubletumbler: {
+            selector: "double-tumbler:radio",
+            classContainer: "double-tumbler-container",
+            label: "<label></label>",
+          },
+        },
+        newCoreElement: "<span class='field-item-container'></span>",
+        placeholderElement: "<span class='placeholder'></span>",
+        requiredElement: "<span class='required'>*</span>",
+        loaderButtonPlace: "<span class='loader-button-place'></span>",
+        respondBox: "<div class='field-item respond-box'></div>",
+        respondTitle: "<h4></h4>",
+        respondMessage: "<span class='respond-list-row'></span>",
+      }),
+        (forms.alwaysWatch = function () {
+          $(document).on(
+            "focusin",
+            forms.var.focusCheckSelector,
+            forms.checkFocusIn
+          ),
+            $(document).on(
+              "focusout",
+              forms.var.focusCheckSelector,
+              forms.checkFocusOut
+            ),
+            $(document).on(
+              "change",
+              forms.var.selectSelector,
+              forms.checkSelect
+            ),
+            $(document).on(
+              "submit",
+              forms.var.formSelector,
+              forms.submitHandler
+            ),
+            $(document).on(
+              "click",
+              forms.var.submitSelector,
+              forms.submitByClick
+            );
+        }),
+        (forms.submitHandler = function () {
+          return forms.submit.apply(this, arguments);
+        }),
+        (forms.submit = function () {
+          var e = $(this),
+            r = $(".default-button.submit", e);
+          if (e.hasClass("block")) return !1;
+          var s = e.attr("action"),
+            o = e.attr("method") || "post",
+            t = e.serialize();
+          return (
+            $.ajax({
+              headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+              },
+              type: o,
+              url: s,
+              dataType: "json",
+              data: t,
+              beforeSend: function () {
+                forms.loaderToggle(e), r.hide();
+              },
+            })
+              .success(function (r) {
+                return r["success-address"]
+                  ? (forms.redirectTo(r["success-address"]), !1)
+                  : e.data("success-address")
+                  ? (forms.redirectTo(e.data("success-address")), !1)
+                  : (e.find(".field-item").hide(),
+                    forms.loaderToggle(e),
+                    forms.showRespond(e, r),
+                    void (
+                      forms.callbacks.success && forms.callbacks.success()
+                    ));
+              })
+              .error(function (s) {
+                r.show(),
+                  forms.loaderToggle(e),
+                  forms.showRespond(e, s.responseJSON),
+                  forms.callbacks.error && forms.callbacks.error();
+              }),
+            !1
+          );
+        }),
+        (forms.on = function (e, r) {
+          switch (e) {
+            case "success":
+              forms.callbacks.success = r;
+            case "error":
+              forms.callbacks.error = r;
+          }
+        }),
+        (forms.redirectTo = function (e) {
+          window.location = e;
+        }),
+        (forms.showRespond = function (e, r) {
+          switch (
+            ($(".respond-box", e).remove(),
+            ($respondBox = $(forms.var.respondBox).addClass(
+              "respond-" + r.status
+            )),
+            ($fields = $(".field-item", e)),
+            forms.showRespondMessage($respondBox, "respondTitle", r.title),
+            typeof r.api_errors)
+          ) {
+            case "object":
+              for (var s in r.api_errors) {
+                var o = r.api_errors[s];
+                forms.showRespondMessage($respondBox, "respondMessage", o.text);
+              }
+              break;
+            default:
+              forms.showRespondMessage(
+                $respondBox,
+                "respondMessage",
+                r.message
+              );
+          }
+          $respondBox.prependTo(e),
+            $.scrollTo($respondBox, 1e3, { offset: -100 });
+        }),
+        (forms.showRespondMessage = function (e, r, s) {
+          $(forms.var[r]).text(s).appendTo(e);
+        }),
+        (forms.loaderToggle = function (e) {
+          ($buttonContainer = $(".field-item.field-button", e)),
+            ($button = $(".default-button.submit", $buttonContainer)),
+            ($loader = $(".loader-button-place", $buttonContainer)),
+            $loader.length
+              ? $loader.remove()
+              : (($loader = $(forms.var.loaderButtonPlace)),
+                $loader.appendTo($buttonContainer));
+        }),
+        (forms.submitByClick = function () {
+          return $(this).parents(forms.var.formSelector).submit(), !1;
+        }),
+        (forms.checkSelect = function () {
+          var e = $(this).parent();
+          e.addClass(forms.var.inprogressClass);
+          var r = e.find(".show-value"),
+            s = $(this)
+              .find('option[value="' + $(this).val() + '"]')
+              .text();
+          r.text(s);
+        }),
+        (forms.checkFocusIn = function () {
+          var e = $(this).parent();
+          if (e.hasClass("readonly")) return !1;
+          e.addClass(forms.var.inprogressClass);
+        }),
+        (forms.checkFocusOut = function () {
+          var e = $(this).parent();
+          forms.checkFocusContent($(this))
+            ? e.addClass(forms.var.inprogressClass)
+            : e.removeClass(forms.var.inprogressClass);
+        }),
+        (forms.checkFocusContent = function (e) {
+          return !!e.val();
+        }),
+        (forms.initForm = function () {
+          var e = $(this).find(forms.var.form);
+          $(forms.var.itemSelect, e)
+            .filter(forms.var.itemSelectException)
+            .each(forms.initField);
+        }),
+        (forms.initField = function () {
+          var e = $(this),
+            r = e.find(":text,select,textarea,.double-tumbler:radio");
+          if (r.length < 1) return !1;
+          forms.createField(e, r);
+        }),
+        (forms.createField = function (e, r) {
+          var s = forms.checkType(r),
+            o = forms.var.type[s],
+            t = r.attr("name"),
+            a = r.attr("id"),
+            n = "readonly" == r.attr("readonly"),
+            l = r.attr("placeholder"),
+            c = !!r.hasClass("required"),
+            i = $(forms.var.newCoreElement).addClass(o.classContainer),
+            f = $(forms.var.placeholderElement).text(l);
+          if ((n && i.addClass("readonly"), c)) {
+            i.addClass("required");
+            var d = $(forms.var.requiredElement);
+            f.append(d);
+          }
+          switch (s) {
+            case "select":
+              var m = forms.copySelect(r);
+              m.attr("name", t);
+              var u = $(forms.var.type[s].elementView);
+              if (r.val()) {
+                var p = r.find('option[value="' + r.val() + '"]').text();
+                u.text(p), i.addClass(forms.var.inprogressClass);
+              }
+              i.append(u).append(m).append(f).replaceAll(r);
+              break;
+            case "doubletumbler":
+              r.each(function (e) {
+                var r = t + e,
+                  o = $(this).val(),
+                  a = i.clone(),
+                  n = $(this).clone().attr("id", r),
+                  l = $(forms.var.type[s].label).attr("for", r).text(o);
+                a.append(n).append(l).replaceAll($(this));
+              });
+              break;
+            default:
+              var m = $(o.element);
+              m.attr("name", t),
+                a && m.attr("id", a),
+                n && m.prop("readonly", "readonly"),
+                i.append(m).append(f).replaceAll(r);
+          }
+          e.show(), forms.autofill(t);
+        }),
+        (forms.copySelect = function (e) {
+          return e
+            .clone()
+            .removeAttr("placeholder")
+            .removeAttr("class")
+            .removeAttr("name");
+        }),
+        (forms.checkType = function (e) {
+          return e.filter("select").length
+            ? "select"
+            : e.filter("textarea").length
+            ? "textarea"
+            : e.filter(":text").length
+            ? "text"
+            : e.filter(".double-tumbler:radio").length
+            ? "doubletumbler"
+            : void 0;
+        }),
+        (forms.autofill = function (e) {
+          (prefill = forms.readhash(e)),
+            prefill &&
+              $("input:text[name='" + e + "']")
+                .val(decodeURIComponent(prefill))
+                .trigger("change")
+                .each(forms.checkFocusOut);
+        }),
+        (forms.readhash = function (e) {
+          if (!window.location.hash) return !1;
+          var r,
+            s = window.location.hash.split("#")[1],
+            o = s.split("&");
+          for (var t in o)
+            if (
+              ((r = o[t].split("=")),
+              r[0].startsWith("fill-form-") && r[0].substr(10) === e)
+            )
+              return r[1];
+          return !1;
+        }),
+        (forms.extension = {});
+
+      var Modal = function (o, e) {
+        var t = [".js-modal-close", ".js-modal-shadow"];
+        (this.modal = jQuery(o)),
+          (this.shadow = jQuery(
+            '<div class="shadow shadow_fullscreen js-modal-shadow"></div>'
+          )),
+          (this.closes = t.join(",")),
+          (e = e || !1),
+          (this.elementExeptions = [".js-modal"]),
+          e &&
+            ((this.elementExeptions = this.elementExeptions.concat(e)),
+            (this.elementExeptions = this.elementExeptions.join(","))),
+          this.setListeners(),
+          (this.wrapper = jQuery(o).parent()),
+          this.setWindowPosition(),
+          jQuery(window).on("resize", this.setWindowPosition.bind(this));
+      };
+      (Modal.prototype.setWindowPosition = function () {
+        var o = jQuery(window).height(),
+          e = this.modal.innerHeight(),
+          t = (o - e) / 2;
+        return (
+          e > o - 28 && (t = 28),
+          this.modal.css({
+            top: t,
+          }),
+          this
+        );
+      }),
+        (Modal.prototype.setListeners = function () {
+          jQuery(document).on("click", this.hide.bind(this)),
+            jQuery(document)
+              .on("mouseenter", this.elementExeptions, this.move)
+              .on("mouseleave", this.elementExeptions, this.leave),
+            jQuery(document).on("keyup", this.hide.bind(this));
+        }),
+        (Modal.prototype.move = function () {
+          jQuery("body").addClass("js-downmodal-hovered");
+        }),
+        (Modal.prototype.leave = function () {
+          jQuery("body").removeClass("js-downmodal-hovered");
+        }),
+        (Modal.prototype.show = function () {
+          this.modal.addClass("active"),
+            this.appendShadow(),
+            jQuery("body").css({
+              overflow: "hidden",
+            }),
+            this.wrapper.addClass("wrapper_modal_active"),
+            this.setWindowPosition(),
+            this.onShown && this.onShown();
+        }),
+        (Modal.prototype.hide = function (o) {
+          (jQuery("body").hasClass("js-downmodal-hovered") &&
+            !jQuery(o.target).hasClass("js-modal-close")) ||
+            (this.modal.removeClass("active"),
+            this.removeShadow(),
+            jQuery("body").css({
+              overflow: "auto",
+            }),
+            this.wrapper.removeClass("wrapper_modal_active"),
+            this.onHidden && this.onHidden());
+        }),
+        (Modal.prototype.appendShadow = function () {
+          jQuery("body").prepend(this.shadow),
+            this.shadow.animate({
+              opacity: 0.12,
+            });
+        }),
+        (Modal.prototype.removeShadow = function () {
+          this.shadow.animate(
+            {
+              opacity: 0,
+            },
+            function () {
+              this.shadow.remove();
+            }.bind(this)
+          );
+        }),
+        (Modal.prototype.on = function (o, e) {
+          switch (o) {
+            case "shown":
+              this.onShown = e;
+              break;
+            case "hidden":
+              this.onHidden = e;
+          }
+          return this;
+        });
+
       var ModalBottom = function (o, t) {
         Modal.apply(this, arguments);
       };
@@ -981,17 +1363,24 @@
         });
 
       var smsForm = function () {
-        (smsForm.$trigger = $("#sms-modal-trigger")),
-          (smsForm.$modal = $("#sms-modal")),
-          (smsForm.$form = $("#sms-form")),
-          (smsForm.$submit = $(".form-submit", smsForm.$form)),
-          (smsForm.$example = $(".js-sms-example")),
-          (smsForm.$success = $(".js-sms-success")),
+        (smsForm.$trigger = jQuery("#sms-modal-trigger")),
+          (smsForm.$modal = jQuery("#sms-modal")),
+          (smsForm.$form = jQuery("#sms-form")),
+          (smsForm.$submit = jQuery(".form-submit", smsForm.$form)),
+          (smsForm.$example = jQuery(".js-sms-example")),
+          (smsForm.$success = jQuery(".js-sms-success")),
           (smsForm.modal = new ModalBottom("#sms-modal", [
             "#sms-modal-trigger",
           ])),
           smsForm.$form.on("keyup", smsForm.reset),
-          smsForm.$trigger.on("click", smsForm.modal.show.bind(smsForm.modal)),
+          smsForm.$trigger.on("click", (e) => {
+            if (e && e.preventDefault) {
+              e.preventDefault();
+            } else {
+              window.event.returnValue = false;
+            }
+            smsForm.modal.show();
+          }),
           smsForm.$submit.on("click", forms.submit);
       };
       (smsForm.reset = function () {
@@ -1025,22 +1414,26 @@
           var o = m[2] || "1",
             r = m[3];
           return (
-            $.ajax({
-              type: "post",
-              url:
-                "https://api.truckerpath.com/tp/user/send/invitation/code?areacode=" +
-                o +
-                "&codeType=TP_OWE&phoneNo=" +
-                r,
-              beforeSend: function () {
-                forms.loaderToggle(smsForm.$form), smsForm.$submit.hide();
-              },
-            })
+            jQuery
+              .ajax({
+                type: "post",
+                url:
+                  "https://api.truckerpath.com/tp/user/send/invitation/code?areacode=" +
+                  o +
+                  "&codeType=TP_OWE&phoneNo=" +
+                  r,
+                beforeSend: function () {
+                  forms.loaderToggle(smsForm.$form), smsForm.$submit.hide();
+                },
+              })
               .success(smsForm.handleSuccess)
               .error(smsForm.handleError),
             !1
           );
         });
+      document.addEventListener("DOMContentLoaded", () => {
+        smsForm();
+      });
     </script>
   </body>
 </html>
