@@ -1,62 +1,63 @@
-var homepageHead = function() {
-    homepageHead.$head = $(".index-head"),
-    homepageHead.$buttonsTpp = $(".scroll-to-tpp", homepageHead.$head),
-    homepageHead.$buttonsTl = $(".scroll-to-tl", homepageHead.$head),
-    homepageHead.$buttons = homepageHead.$buttonsTpp.add(homepageHead.$buttonsTl),
-    homepageHead.$tppPhone = $(".head-phone-ios", homepageHead.$head),
-    homepageHead.$tp = $(".scroll-to-tp", homepageHead.$head),
-    homepageHead.$cm = $(".scroll-to-tm", homepageHead.$head),
-    homepageHead.$tlPhone = $(".head-phone-android", homepageHead.$head),
-    homepageHead.$phones = homepageHead.$tppPhone.add(homepageHead.$tlPhone),
-    homepageHead.duration = 280,
-    homepageHead.$buttons.on("mouseenter", homepageHead.updateCover),
-    homepageHead.$buttonsTpp.on("click", function() {
-        $.scrollTo($(".index-tpp"), 600, {
-            offset: -66
-        })
-    }),
-    homepageHead.$buttonsTl.on("click", function() {
-        $.scrollTo($(".index-tl"), 600, {
-            offset: -66
-        })
-    }),
-    homepageHead.$tp.on("click", function() {
-        $.scrollTo($(".index-tp"), 600, {
-            offset: -66
-        })
-    }),
-    homepageHead.$cm.on("click", function() {
-        $.scrollTo($(".index-cm-to"), 600, {
-            offset: -66
-        })
-    })
-};
-homepageHead.updateCover = function() {
-    if (homepageHead.$head.hasClass("head-phones-inaction"))
-        return !1;
-    $(this).hasClass("scroll-to-tpp") && homepageHead.$tlPhone.hasClass("head-phone-ztop") || $(this).hasClass("scroll-to-tl") && homepageHead.$tppPhone.hasClass("head-phone-ztop")
-}
-,
-homepageHead.updateCover.toSides = function(e) {
-    homepageHead.$head.addClass("head-phones-inaction")
-}
-,
-homepageHead.updateCover.changeTo = function(e) {
-    var a = "tpp" == e ? "tl" : "tpp";
-    homepageHead.$phones.removeClass("head-phone-ztop"),
-    homepageHead["$" + e + "Phone"].addClass("head-phone-ztop"),
-    homepageHead.$tppPhone.animate({
-        top: "tpp" == a ? "14px" : 0,
-        left: "+=40px"
-    }, homepageHead.duration),
-    homepageHead.$tlPhone.animate({
-        top: "tl" == a ? "14px" : 0,
-        left: "-=40px"
-    }, homepageHead.duration, function() {
-        homepageHead.$head.removeClass("head-phones-inaction")
-    })
-}
-;
+
+// var homepageHead = function() {
+//     homepageHead.$head = $(".index-head"),
+//     homepageHead.$buttonsTpp = $(".scroll-to-tpp", homepageHead.$head),
+//     homepageHead.$buttonsTl = $(".scroll-to-tl", homepageHead.$head),
+//     homepageHead.$buttons = homepageHead.$buttonsTpp.add(homepageHead.$buttonsTl),
+//     homepageHead.$tppPhone = $(".head-phone-ios", homepageHead.$head),
+//     homepageHead.$tp = $(".scroll-to-tp", homepageHead.$head),
+//     homepageHead.$cm = $(".scroll-to-tm", homepageHead.$head),
+//     homepageHead.$tlPhone = $(".head-phone-android", homepageHead.$head),
+//     homepageHead.$phones = homepageHead.$tppPhone.add(homepageHead.$tlPhone),
+//     homepageHead.duration = 280,
+//     homepageHead.$buttons.on("mouseenter", homepageHead.updateCover),
+//     homepageHead.$buttonsTpp.on("click", function() {
+//         $.scrollTo($(".index-tpp"), 600, {
+//             offset: -66
+//         })
+//     }),
+//     homepageHead.$buttonsTl.on("click", function() {
+//         $.scrollTo($(".index-tl"), 600, {
+//             offset: -66
+//         })
+//     }),
+//     homepageHead.$tp.on("click", function() {
+//         $.scrollTo($(".index-tp"), 600, {
+//             offset: -66
+//         })
+//     }),
+//     homepageHead.$cm.on("click", function() {
+//         $.scrollTo($(".index-cm-to"), 600, {
+//             offset: -66
+//         })
+//     })
+// };
+// homepageHead.updateCover = function() {
+//     if (homepageHead.$head.hasClass("head-phones-inaction"))
+//         return !1;
+//     $(this).hasClass("scroll-to-tpp") && homepageHead.$tlPhone.hasClass("head-phone-ztop") || $(this).hasClass("scroll-to-tl") && homepageHead.$tppPhone.hasClass("head-phone-ztop")
+// }
+// ,
+// homepageHead.updateCover.toSides = function(e) {
+//     homepageHead.$head.addClass("head-phones-inaction")
+// }
+// ,
+// homepageHead.updateCover.changeTo = function(e) {
+//     var a = "tpp" == e ? "tl" : "tpp";
+//     homepageHead.$phones.removeClass("head-phone-ztop"),
+//     homepageHead["$" + e + "Phone"].addClass("head-phone-ztop"),
+//     homepageHead.$tppPhone.animate({
+//         top: "tpp" == a ? "14px" : 0,
+//         left: "+=40px"
+//     }, homepageHead.duration),
+//     homepageHead.$tlPhone.animate({
+//         top: "tl" == a ? "14px" : 0,
+//         left: "-=40px"
+//     }, homepageHead.duration, function() {
+//         homepageHead.$head.removeClass("head-phones-inaction")
+//     })
+// }
+// ;
 var homepageTruckloads = function() {
     homepageTruckloads.$tl = $(".index-tl"),
     homepageTruckloads.$buttons = $(".index-tl-buttons", homepageTruckloads.$tl),
@@ -132,4 +133,5 @@ var homepageTruckloads = function() {
         }
     })
 };
+
 homepageTruckloads();
