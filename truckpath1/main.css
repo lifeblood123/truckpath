@@ -236,6 +236,10 @@ html h6 .first {
 .animated.bounceIn {
     animation-duration: 1s;
 }
+/* 导航栏修改z-indx */
+header .et_builder_inner_content{
+    z-index: 11;
+}
 
 @keyframes bounceIn {
 
@@ -32314,6 +32318,9 @@ form.block .signup__submit {
     font-size: 16px;
 }
 
+.topbar__menu .headler-btn {
+    color: #fff;
+}
 .topbar__toggle {
     display: none;
 }
