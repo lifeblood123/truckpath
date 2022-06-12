@@ -1,0 +1,1 @@
+var pressAndSupport=function(e){e({disableMobile:!1,disablePC:!0,offsetCt:{mobile:-125},itemWidthCt:{mobile:100},boxClass:".press-box.index-press-box",moveContainerClass:".item-containers",itemsClass:".item",paginatorClass:null,navLeftClass:null,navRightClass:null,htmlPageItem:null,pageItemClass:null,interval:1e4,duration:1e3,size:5})};
