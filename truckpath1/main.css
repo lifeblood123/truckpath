@@ -1009,7 +1009,12 @@ div.ghidden {
     text-align: center;
     padding: 114px 0 33px;
 }
+.index-head .et_pb_text_inner h1{
+ 
+    padding: 48px 0 33px;
 
+
+}
 .index-head .index-head-columns {
     text-align: left;
     position: relative;
@@ -1017,7 +1022,7 @@ div.ghidden {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 49px;
+    /* margin-top: 49px; */
     overflow: hidden;
 }
 

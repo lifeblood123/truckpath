@@ -1002,6 +1002,7 @@ div.ghidden {
     color: #fff;
 }
 
+
 .index-head h1 {
     display: block;
     box-sizing: border-box;
@@ -1009,6 +1010,11 @@ div.ghidden {
     text-align: center;
     padding: 114px 0 33px;
 }
+
+.index-head .et_pb_text_inner h1{
+    padding: 0px 0 33px;
+}
+
 
 .index-head .index-head-columns {
     text-align: left;
