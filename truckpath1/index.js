@@ -132,4 +132,14 @@ var homepageTruckloads = function() {
         }
     })
 };
-homepageTruckloads();
+window.addEventListener('DOMContentLoaded', (event) => {
+    homepageTruckloads();
+
+    indexOpinion(function(o) {
+        slideshow(o, startTouch)
+    });
+    // pressAndSupport(function(o) {
+    //     slideshow(o, startTouch)
+    // });
+});
+

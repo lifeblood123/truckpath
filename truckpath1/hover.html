@@ -5,81 +5,689 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <script
-      type="text/javascript"
-      src="https://truckerpath.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
-      id="jquery-core-js"
-    ></script> -->
+
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
+    <script src="slidder.js"></script>
+    <script src="touch.js"></script>
   </head>
+
   <body>
-      <div class="fullwidth index-tl">
-        <div class="container_10">
-            <h2>TruckLoads</h2>
-            <div class="index-tl-text">
-              TruckLoads by Trucker Path helps carriers and owner operators move
-              freight via our mobile application and web portal. Thousands of
-              qualified carriers are searching through our platform to move the loads
-              posted by hundreds of freight companies. We are here to match up the
-              two.
-            </div>
-            <div class="index-tl-buttons">
-              <div class="index-tl-button-carriers">
-                <div class="index-tl-button-container">
-                  <h3>For Carriers</h3>
-                  <span class="index-tl-description"
-                    >We aggregate loads from brokers, 3PLs, shippers, so you have
-                    access to all the freight available at your fingertips</span
-                  ><span class="index-tl-navigation"
-                    ><a
-                      data-mpevent="1006"
-                      href="/truckloads/free-load-board/"
-                      class="default-button"
-                      >Find Loads</a
-                    >
+    <div
+      class="et_pb_section et_pb_section_7 et_pb_fullwidth_section et_section_regular"
+    >
+      <div
+        class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_1 index-opinion-box opinion-box"
+      >
+        <div class="et_pb_code_inner">
+          <div class="opinion-tab">
+            <div class="opinion-items">
+              <div class="opinion-item" style="left: -1938px">
+                <div class="opinion-item-content" style="margin-top: 20px">
+                  <div class="opinion-text">
+                    Best app, recommend. Every driver gets it at orientation.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">PAM Transport</div>
+                    <div class="opinion-store">— Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    ...this is one of the best mobile loadboards. Keep up the
+                    great work!!
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Martin Negrete</div>
+                    <div class="opinion-store">— TruckLoads for Carriers</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    Don't often take time to write reviews of apps, but this one
+                    is so deserving in my line of work as a "trucker". Some
+                    things are just plain good and exceed expectations and this
+                    is one of those things.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Thomas Wynn</div>
+                    <div class="opinion-store">— Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    It gives me everything I need to know about a load. I look
+                    at it every day – one of the best load boards I’ve seen in a
+                    while.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Owner operator</div>
+                    <div class="opinion-store">— TruckLoads for Carriers</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    I'm a new truck driver so I especially find Trucker Path
+                    very helpful. It's an actual Trip planning/routing app. They
+                    show truck stops on your route, rest areas, scales; they
+                    even give you the truck entrances!
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">K Douglas</div>
+                    <div class="opinion-store">- Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content" style="margin-top: 0px">
+                  <div class="opinion-text">
+                    Best app, recommend. Every driver gets it at orientation.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">PAM Transport</div>
+                    <div class="opinion-store">— Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content" style="margin-top: 0px">
+                  <div class="opinion-text">
+                    ...this is one of the best mobile loadboards. Keep up the
+                    great work!!
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Martin Negrete</div>
+                    <div class="opinion-store">— TruckLoads for Carriers</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content" style="margin-top: 0px">
+                  <div class="opinion-text">
+                    Don't often take time to write reviews of apps, but this one
+                    is so deserving in my line of work as a "trucker". Some
+                    things are just plain good and exceed expectations and this
+                    is one of those things.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Thomas Wynn</div>
+                    <div class="opinion-store">— Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content" style="margin-top: 0px">
+                  <div class="opinion-text">
+                    It gives me everything I need to know about a load. I look
+                    at it every day – one of the best load boards I’ve seen in a
+                    while.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Owner operator</div>
+                    <div class="opinion-store">— TruckLoads for Carriers</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content" style="margin-top: 0px">
+                  <div class="opinion-text">
+                    I'm a new truck driver so I especially find Trucker Path
+                    very helpful. It's an actual Trip planning/routing app. They
+                    show truck stops on your route, rest areas, scales; they
+                    even give you the truck entrances!
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">K Douglas</div>
+                    <div class="opinion-store">- Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content" style="margin-top: 0px">
+                  <div class="opinion-text">
+                    Best app, recommend. Every driver gets it at orientation.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">PAM Transport</div>
+                    <div class="opinion-store">— Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    ...this is one of the best mobile loadboards. Keep up the
+                    great work!!
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Martin Negrete</div>
+                    <div class="opinion-store">— TruckLoads for Carriers</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    Don't often take time to write reviews of apps, but this one
+                    is so deserving in my line of work as a "trucker". Some
+                    things are just plain good and exceed expectations and this
+                    is one of those things.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Thomas Wynn</div>
+                    <div class="opinion-store">— Trucker Path app</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    It gives me everything I need to know about a load. I look
+                    at it every day – one of the best load boards I’ve seen in a
+                    while.
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">Owner operator</div>
+                    <div class="opinion-store">— TruckLoads for Carriers</div>
+                  </div>
+                </div>
+                <div class="opinion-item-content">
+                  <div class="opinion-text">
+                    I'm a new truck driver so I especially find Trucker Path
+                    very helpful. It's an actual Trip planning/routing app. They
+                    show truck stops on your route, rest areas, scales; they
+                    even give you the truck entrances!
+                    <img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                      class="option-quote option-quote_1"
+                    /><img
+                      src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                      class="option-quote option-quote_2"
+                    />
+                  </div>
+                  <div>
+                    <div class="opinion-author">K Douglas</div>
+                    <div class="opinion-store">- Trucker Path app</div>
+                  </div>
                 </div>
               </div>
-              <div class="index-tl-button-brokers">
-                <div class="index-tl-button-container">
-                  <h3>For Brokers</h3>
-                  <span class="index-tl-description"
-                    >The best way to reach qualified carriers and get your freight
-                    covered efficiently and reliably</span
-                  ><span class="index-tl-navigation"
-                    ><a
-                      data-mpevent="1010"
-                      href="/truckloads/broker-load-board/"
-                      class="default-button"
-                      >Post Freight</a
-                    ></span
-                  >
-                </div>
-              </div>
             </div>
-            <div class="index-tl-art index-tl-art-carriers">
-              <div class="index-tl-mobile">
+            <div class="navigation-slideleft"></div>
+            <div class="navigation-slideright"></div>
+          </div>
+          <div class="paginator"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fullwidth core-elements index-opinion-box opinion-box">
+      <div class="opinion-tab">
+        <div class="opinion-items">
+          <div class="opinion-item" style="left: -1938px">
+            <div class="opinion-item-content" style="margin-top: 20px">
+              <div class="opinion-text">
+                Best app, recommend. Every driver gets it at orientation.
                 <img
-                  class="index-tl-mobile-carriers"
-                  src="https://www.truckerpath.com/assets/img/index/tl-mobile-carriers@2x.png"
-                  alt=""
-                />
-              </div>
-              <div class="index-tl-web">
-                <img
-                  class="index-tl-web-brokers"
-                  src="https://www.truckerpath.com/assets/img/index/tl-web-brokers@2x.png"
-                  alt=""
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
                 /><img
-                  class="index-tl-web-carriers"
-                  src="https://www.truckerpath.com/assets/img/index/tl-web-carriers@2x.png"
-                  alt=""
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
                 />
+              </div>
+              <div>
+                <div class="opinion-author">PAM Transport</div>
+                <div class="opinion-store">— Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                ...this is one of the best mobile loadboards. Keep up the great
+                work!!
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Martin Negrete</div>
+                <div class="opinion-store">— TruckLoads for Carriers</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                Don't often take time to write reviews of apps, but this one is
+                so deserving in my line of work as a "trucker". Some things are
+                just plain good and exceed expectations and this is one of those
+                things.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Thomas Wynn</div>
+                <div class="opinion-store">— Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                It gives me everything I need to know about a load. I look at it
+                every day – one of the best load boards I’ve seen in a while.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Owner operator</div>
+                <div class="opinion-store">— TruckLoads for Carriers</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                I'm a new truck driver so I especially find Trucker Path very
+                helpful. It's an actual Trip planning/routing app. They show
+                truck stops on your route, rest areas, scales; they even give
+                you the truck entrances!
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">K Douglas</div>
+                <div class="opinion-store">- Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content" style="margin-top: 0px">
+              <div class="opinion-text">
+                Best app, recommend. Every driver gets it at orientation.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">PAM Transport</div>
+                <div class="opinion-store">— Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content" style="margin-top: 0px">
+              <div class="opinion-text">
+                ...this is one of the best mobile loadboards. Keep up the great
+                work!!
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Martin Negrete</div>
+                <div class="opinion-store">— TruckLoads for Carriers</div>
+              </div>
+            </div>
+            <div class="opinion-item-content" style="margin-top: 0px">
+              <div class="opinion-text">
+                Don't often take time to write reviews of apps, but this one is
+                so deserving in my line of work as a "trucker". Some things are
+                just plain good and exceed expectations and this is one of those
+                things.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Thomas Wynn</div>
+                <div class="opinion-store">— Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content" style="margin-top: 0px">
+              <div class="opinion-text">
+                It gives me everything I need to know about a load. I look at it
+                every day – one of the best load boards I’ve seen in a while.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Owner operator</div>
+                <div class="opinion-store">— TruckLoads for Carriers</div>
+              </div>
+            </div>
+            <div class="opinion-item-content" style="margin-top: 0px">
+              <div class="opinion-text">
+                I'm a new truck driver so I especially find Trucker Path very
+                helpful. It's an actual Trip planning/routing app. They show
+                truck stops on your route, rest areas, scales; they even give
+                you the truck entrances!
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">K Douglas</div>
+                <div class="opinion-store">- Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content" style="margin-top: 0px">
+              <div class="opinion-text">
+                Best app, recommend. Every driver gets it at orientation.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">PAM Transport</div>
+                <div class="opinion-store">— Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                ...this is one of the best mobile loadboards. Keep up the great
+                work!!
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Martin Negrete</div>
+                <div class="opinion-store">— TruckLoads for Carriers</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                Don't often take time to write reviews of apps, but this one is
+                so deserving in my line of work as a "trucker". Some things are
+                just plain good and exceed expectations and this is one of those
+                things.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Thomas Wynn</div>
+                <div class="opinion-store">— Trucker Path app</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                It gives me everything I need to know about a load. I look at it
+                every day – one of the best load boards I’ve seen in a while.
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">Owner operator</div>
+                <div class="opinion-store">— TruckLoads for Carriers</div>
+              </div>
+            </div>
+            <div class="opinion-item-content">
+              <div class="opinion-text">
+                I'm a new truck driver so I especially find Trucker Path very
+                helpful. It's an actual Trip planning/routing app. They show
+                truck stops on your route, rest areas, scales; they even give
+                you the truck entrances!
+                <img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-1.svg"
+                  class="option-quote option-quote_1"
+                /><img
+                  src="https://truckerpath.com/wp-content/uploads/2022/06/opinion-quote-2.svg"
+                  class="option-quote option-quote_2"
+                />
+              </div>
+              <div>
+                <div class="opinion-author">K Douglas</div>
+                <div class="opinion-store">- Trucker Path app</div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="navigation-slideleft"></div>
+        <div class="navigation-slideright"></div>
       </div>
-      <script src="index.js"></script>
-   
+      <div class="paginator"></div>
+    </div>
+    <!-- <div class="et_pb_section et_pb_section_5 et_pb_with_background et_section_regular fullwidth index-tl container_10 grey-content">
+        <div class="et_pb_row et_pb_row_12">
+            <div
+                class="et_pb_column et_pb_column_4_4 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                <div class="et_pb_module et_pb_text et_pb_text_26  et_pb_text_align_center et_pb_bg_layout_light">
+                    <div class="et_pb_text_inner">
+                        <h2 style="text-align: center; margin-bottom: 15px;">TruckerLoads</h2>
+                        <div class="index-tpp-text index-tl-text" style="text-align: center;"><span>TruckLoads by
+                                Trucker Path helps
+                                carriers and owner operators move freight via our mobile application and web portal.
+                                Thousands of qualified carriers are searching through our platform to move the loads
+                                posted by hundreds of freight companies. We are here to match up the two.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="et_pb_row et_pb_row_13">
+            <div
+                class="et_pb_column et_pb_column_4_4 et_pb_column_26  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                <div class="et_pb_module et_pb_text et_pb_text_27  et_pb_text_align_left et_pb_bg_layout_light">
+                    <div class="et_pb_text_inner">
+                        <div class="index-tl-buttons">
+                            <div class="index-tl-button-carriers">
+                                <div class="index-tl-button-container">
+                                    <h3>For Carriers</h3>
+                                    <p><span class="index-tl-description">We aggregate loads from brokers, 3PLs,
+                                            shippers, so you have access to all the freight available at your
+                                            fingertips</span><span class="index-tl-navigation"><a data-mpevent="1006"
+                                                href="/truckloads/free-load-board/" class="default-button">Find
+                                                Loads</a></span></p>
+                                </div>
+                            </div>
+                            <div class="index-tl-button-brokers">
+                                <div class="index-tl-button-container">
+                                    <h3>For Brokers</h3>
+                                    <p><span class="index-tl-description">The best way to reach qualified carriers and
+                                            get your freight<br>covered efficiently and reliably</span><span
+                                            class="index-tl-navigation"><a data-mpevent="1010"
+                                                href="/truckloads/broker-load-board/"
+                                                class="default-button">Post<br>Freight</a></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="et_pb_row et_pb_row_14">
+                <div
+                    class="et_pb_column et_pb_column_4_4 et_pb_column_28  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                    <div class="et_pb_module et_pb_image et_pb_image_12 index-tl-art index-tl-art-carriers">
+                        <div class="index-tl-mobile">
+                            <img class="index-tl-mobile-carriers"
+                                src="https://www.truckerpath.comhttps://truckerpath.com/wp-content/uploads/2022/06/tl-mobile-carriers@2x.png" alt="" />
+                        </div>
+                        <div class="index-tl-web">
+                            <img class="index-tl-web-brokers"
+                                src="https://www.truckerpath.comhttps://truckerpath.com/wp-content/uploads/2022/06/tl-web-brokers@2x.png" alt="" /><img
+                                class="index-tl-web-carriers"
+                                src="https://www.truckerpath.comhttps://truckerpath.com/wp-content/uploads/2022/06/tl-web-carriers@2x.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="fullwidth index-tl grey-content">
+        <div class="container_10">
+            <h2>TruckLoads</h2>
+            <div class="index-tl-text">
+                TruckLoads by Trucker Path helps carriers and owner operators move
+                freight via our mobile application and web portal. Thousands of
+                qualified carriers are searching through our platform to move the loads
+                posted by hundreds of freight companies. We are here to match up the
+                two.
+            </div>
+            <div class="index-tl-buttons">
+                <div class="index-tl-button-carriers">
+                    <div class="index-tl-button-container">
+                        <h3>For Carriers</h3>
+                        <span class="index-tl-description">We aggregate loads from brokers, 3PLs, shippers, so you have
+                            access to all the freight available at your fingertips</span><span
+                            class="index-tl-navigation"><a data-mpevent="1006" href="/truckloads/free-load-board/"
+                                class="default-button">Find Loads</a>
+                    </div>
+                </div>
+                <div class="index-tl-button-brokers">
+                    <div class="index-tl-button-container">
+                        <h3>For Brokers</h3>
+                        <span class="index-tl-description">The best way to reach qualified carriers and get your freight
+                            covered efficiently and reliably</span><span class="index-tl-navigation"><a
+                                data-mpevent="1010" href="/truckloads/broker-load-board/" class="default-button">Post
+                                Freight</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="index-tl-art index-tl-art-carriers">
+                <div class="index-tl-mobile">
+                    <img class="index-tl-mobile-carriers"
+                        src="https://www.truckerpath.comhttps://truckerpath.com/wp-content/uploads/2022/06/tl-mobile-carriers@2x.png" alt="" />
+                </div>
+                <div class="index-tl-web">
+                    <img class="index-tl-web-brokers"
+                        src="https://www.truckerpath.comhttps://truckerpath.com/wp-content/uploads/2022/06/tl-web-brokers@2x.png" alt="" /><img
+                        class="index-tl-web-carriers"
+                        src="https://www.truckerpath.comhttps://truckerpath.com/wp-content/uploads/2022/06/tl-web-carriers@2x.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script src="index.js"></script>
   </body>
 </html>

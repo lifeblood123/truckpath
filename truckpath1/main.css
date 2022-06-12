@@ -807,12 +807,12 @@ div.ghidden {
 }
 
 .opinion-box .navigation-slideleft {
-    background-image: url(/assets/img/opinion-nav-left@2x.png);
+    background-image: url(https://truckerpath.com/wp-content/uploads/2022/06/opinion-nav-left@2x.png);
     margin-left: -444px;
 }
 
 .opinion-box .navigation-slideright {
-    background-image: url(/assets/img/opinion-nav-right@2x.png);
+    background-image: url(https://truckerpath.com/wp-content/uploads/2022/06/opinion-nav-right@2x.png);
     margin-left: 430px;
 }
 
@@ -1363,6 +1363,16 @@ div.ghidden {
     font-weight: 600;
 }
 
+/* 测试 */
+.index-tl .index-tl-buttons{
+    text-align: center;
+}
+.index-tl-buttons .default-button{
+    text-align: center;
+}
+/* 测试 */
+
+
 .index-cm h2,
 .index-cm h2 *,
 .index-tl .index-tl-buttons .index-tl-button-brokers h3,
@@ -1722,6 +1732,10 @@ div.ghidden {
     padding: 0 1px;
     z-index: 5;
 }
+/* 重新定义，防止容器塌陷 */
+.index-tl .index-tl-art .index-tl-web {
+    height: 467px;
+}
 
 .index-tl .index-tl-art .index-tl-web img {
     width: 925px;
@@ -1801,6 +1815,10 @@ div.ghidden {
     padding-top: 80px;
     box-sizing: border-box;
     overflow: hidden;
+}
+/* 滚动条撑大 */
+.index-opinion-box.opinion-box  .et_pb_code_inner{
+    height: 100%;
 }
 
 .index-opinion-box.opinion-box .opinion-tab {
@@ -32234,7 +32252,7 @@ form.block .signup__submit {
 
 .topbar__logo_truckerpath a {
     width: 197px;
-    background: url(/assets/svg/logo-truckerpath.svg) top left no-repeat;
+    background: url(https://truckerpath.com/wp-content/uploads/2022/05/logo-truckerpath.svg) top left no-repeat;
     background-size: auto 100%;
 }
 
@@ -33529,8 +33547,4 @@ form.block .signup__submit {
         padding-top: 60px;
         box-sizing: border-box;
     }
-}
-
-.et_pb_image_wrap {
-    border: 1px solid red;
 }
