@@ -137,11 +137,11 @@ html {
 }
 
 html * {
-    font-family: "Open Sans", Arial, sans-serif;
+    /* font-family: "Open Sans", Arial, sans-serif;
     color: #606060;
     font-size: 16px;
     line-height: 1.6em;
-    font-weight: 400;
+    font-weight: 400; */
 }
 
 html br {
@@ -1089,20 +1089,20 @@ div.ghidden {
 
 .index-head .index-head-columns .index-head-left.index-head-left,
 .index-head .index-head-columns .index-head-right.index-head-left {
-    width: 231px;
+    width: 220px;
 }
 
 .index-head .index-head-columns .index-head-left.index-head-right,
 .index-head .index-head-columns .index-head-right.index-head-right {
-    width: 231px;
-    margin-left: 66px;
+    width: 220px;
+    margin-left: 10px;
 }
 
 .index-head .index-head-columns .index-head-center {
     z-index: 6;
     width: 413px;
     height: 346px;
-    margin-left: 28px;
+    margin-left: -10px;
 }
 
 .index-head .index-head-columns .index-head-center .head-phone-android,
