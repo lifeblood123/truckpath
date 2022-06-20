@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      charset="utf-8"
+      type="text/javascript"
+      src="//js.hsforms.net/forms/shell.js"
+    ></script>
+    <!--[if lte IE 8]><script charset=utf-8 type="text/javascript" src="//http://js.hsforms.net/forms/v2-legacy.js"></script><![endif] -->
+    <!-- <script
+      charset="utf-8"
+      type="text/javascript"
+      src="//http://js.hsforms.net/forms/v2.js"
+    ></script> -->
+    <script
+      data-ad-client="ca-pub-7737034038641773"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <!--[if lt IE 9
+      ]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+    ><![endif]-->
+    <style>
+      .header-dialog {
+      }
+      .displayNone {
+        display: none !important;
+      }
+      .dialog-warper-footer {
+                z-index: 1000;
+                width: 480px;
+                max-width: 80%;
+                background: #fff;
+                border-radius: 4px;
+                left: 50%;
+                top: 50%;
+                max-height: 90vh;
+                overflow-y: auto
+            }
+      .header-dialog:before {
+        content: "";
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 100;
+        left: 0;
+        top: 0;
+      }
+      .dialog-warper {
+        position: fixed;
+        z-index: 1000;
+        width: 480px;
+        max-width: 80%;
+        background: #fff;
+        border-radius: 4px;
+        left: 50%;
+        top: 50%;
+        max-height: 100vh;
+        overflow-y: auto;
+        transform: translate(-50%, -50%);
+      }
+
+      .dialog-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e6e9ec;
+      }
+
+      .dialog-title {
+        width: 360px;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #000;
+        font-weight: 600;
+      }
+
+      .dialog-content {
+        padding: 24px;
+        height: 336px;
+        box-sizing: border-box;
+      }
+
+      .dialog-choice {
+        font-size: 12px;
+        line-height: 1.33;
+        color: #606060;
+      }
+
+      .dialog-item {
+        margin-top: 16px;
+        /* height: 60px; */
+        justify-content: space-between;
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        border: 1px solid #dadce1;
+        cursor: pointer;
+        flex-direction: row;
+        display: flex;
+      }
+
+      .dialog-option .dialog-left {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .dialog-option .dialog-icon {
+        width: 28px;
+        height: 28px;
+        vertical-align: middle;
+      }
+
+      .dialog-option .dialog-opt {
+        font-weight: 500;
+        font-size: 14px;
+        margin-left: 16px;
+        line-height: 28px;
+        color: #000;
+      }
+
+      .dialog-option .dialog-circle {
+        width: 18px;
+        height: 18px;
+        margin: 4px 0;
+        border: 1px solid #dadce1;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .dialog-select {
+        border: 1px solid #0a8dd1;
+        background-color: #f2f9fc;
+      }
+
+      .dialog-select .dialog-circle {
+        width: 8px;
+        height: 8px;
+        border: 6px solid #0a8dd1;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .dialog-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+
+      .dialog-botton {
+        width: 190px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 4px;
+        background-color: #0a8dd1;
+        border: none;
+        font-family: OpenSans-SemiBold;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .dialog-form {
+        padding: 24px;
+      }
+
+      .dialog-close {
+        cursor: pointer;
+      }
+      .dialog-warper-footer, .submit-dialog {
+    transform: translate(-50%,-50%);
+    position: fixed;
+}
+.form-dialog-content {
+    padding: 24px;
+    box-sizing: border-box;
+    height: 70vh;
+    overflow-y: auto;
+}
+.submit-dialog {
+                width: 402px;
+                max-width: 80vw;
+                box-sizing: border-box;
+                min-height: 194px;
+                padding: 24px 50px;
+                background: #fff;
+                top: 50%;
+                left: 50%;
+                z-index: 101;
+                border-radius: 8px
+            }
+
+            .submit-content {
+                position: relative
+            }
+
+            .submit-close,.submit-num {
+                position: absolute;
+                top: 0;
+                z-index: 1
+            }
+
+            .submit-close {
+                right: -30px;
+                width: 24px;
+                height: 24px;
+                cursor: pointer
+            }
+
+            .submit-num {
+                right: -2px;
+                line-height: 24px;
+                color: #7F8596
+            }
+
+            .submit-icon {
+                height: 40px;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: center;
+                justify-content: center
+            }
+
+            .submit-icon img {
+                height: 100%
+            }
+
+            .submit-title {
+                margin-top: 10px;
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                color: #000
+            }
+
+            .submit-footerTips,.submit-subTitle {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                text-align: center
+            }
+
+            .submit-subTitle {
+                margin-top: 10px;
+                color: #7F8596
+            }
+
+            .submit-footerTips {
+                margin-top: 32px;
+                color: #DADCE1
+            }
+    </style>
+    <!-- <script src="https://truckerpath.com/assets/components/jquery/jquery.min.js?70"></script> -->
+    <script
+    type="text/javascript"
+    src="https://truckerpath.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+    id="jquery-core-js"
+  ></script>
+  </head>
+
+  <body>
+    <input type="button" class="dispatch-start-btn" value="test" />
+   
+    <script src="hbspt-form.js"></script>
+    <script src="cmd-dispatch.js"></script>
+    <script>
+        var formStr = ` <div class="header-dialog handlerHbsptDialog displayNone">
+        <div
+          id="“hasForm”"
+          class="dialog-warper-footer handlerHbsptWarper"
+          style="width: 600px"
+        >
+          <div class="dialog-header">
+            <span class="dialog-title handlerHbsptDialogTitle"
+              >See how Trucker Path’s Dispatch can scale up your business</span
+            ><span class="handlerClose handlerHbsptClose"
+              ><img src="https://truckerpath.com/wp-content/uploads/2022/05/icons-16-line-drop-down.svg"
+            /></span>
+          </div>
+        </div>
+      </div>
+      <div class="header-dialog displayNone handlerHbsptSubmitDialog">
+        <div class="submit-dialog">
+          <div class="submit-content">
+            <div class="submit-icon">
+              <img src="https://truckerpath.com/wp-content/uploads/2022/06/icon-suceess.svg" />
+            </div>
+            <div class="submit-title">Thank you for submitting the form!</div>
+            <div class="submit-subTitle">
+              Our team will get back to you as soon as possible.
+            </div>
+            <div class="submit-footerTips">
+              You will be redirected to the homepage
+            </div>
+            <div class="submit-num handlerHbsptSubmitNum">5</div>
+            <div class="submit-close handlerHbsptSubmitClose">
+              <img src="https://truckerpath.com/wp-content/uploads/2022/06/icon-close.svg" />
+            </div>
+          </div>
+        </div>
+      </div>`
+        window.addEventListener('DOMContentLoaded', (event) => {
+            jQuery('body').append(jQuery(formStr));
+            hbsptForm();
+            CMDDispatch();
+        });
+    </script>
+  </body>
+</html>

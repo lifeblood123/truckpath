@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  class="ab-ipCtaTitle-try ab-tlbHeaderCtaBoxPosition-together ab-blogTpBanner-300"
+  class="ab-ipCtaTitle-signup ab-tlbHeaderCtaBoxPosition-separately ab-blogTpBanner-300"
 >
   <head>
-    <title>Trucker Path | Technology Built for the Trucking Industry</title>
+    <title>Trucker Path | Dispatch | Finding Loads | Load Board</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,26 +14,29 @@
     />
     <meta
       name="description"
-      content="Trucker Path connects the largest community of truckers with other truckers, brokers, and logistics professionals to improve life on and off the road."
+      content="Trucker Path Dispatch Service provides drivers more revenue hauling loads with less back-office work."
     />
-    <meta name="keywords" content="" />
+    <meta
+      name="keywords"
+      content="Finding loads, Dispatch, Truck Navigation, hauling loads, load board, finding freight, dispatch service"
+    />
     <meta
       name="csrf-token"
-      content="PGQzHoAsSeOmbcHjhkn5gJAfEoNgL8yXqYa8uhvf"
+      content="JHLwCgJGoWqnai4ftqBp21Asfq7EvDXbL5E1kQOU"
     />
     <meta name="build" content="70" />
-    <link href="https://truckerpath.com/" rel="canonical" />
+    <link href="https://truckerpath.com/dispatch/" rel="canonical" />
     <meta
       property="og:title"
-      content="Trucker Path | Technology Built for the Trucking Industry"
+      content="Trucker Path | Dispatch | Finding Loads | Load Board"
     />
     <meta
       property="og:description"
-      content="Trucker Path connects the largest community of truckers with other truckers, brokers, and logistics professionals to improve life on and off the road."
+      content="Trucker Path Dispatch Service provides drivers more revenue hauling loads with less back-office work."
     />
     <meta
       property="og:image"
-      content="/assets/img/facebook_og/og_default.png"
+      content="https://truckerpath.com/assets/img/dispatch/img-3@2x.png"
     />
     <meta property="og:url" content="" />
     <!-- Google Tag Manager -->
@@ -130,11 +133,11 @@
       src="//js.hsforms.net/forms/shell.js"
     ></script>
     <!--[if lte IE 8]><script charset=utf-8 type="text/javascript" src="//http://js.hsforms.net/forms/v2-legacy.js"></script><![endif] -->
-    <!-- <script
+    <script
       charset="utf-8"
       type="text/javascript"
       src="//http://js.hsforms.net/forms/v2.js"
-    ></script> -->
+    ></script>
     <script
       data-ad-client="ca-pub-7737034038641773"
       async
@@ -478,6 +481,11 @@
       }
       .btn-download:hover i {
         transform: rotate(90deg);
+      }
+      .dialog-warper-footer,
+      .submit-dialog {
+        transform: translate(-50%, -50%);
+        position: fixed;
       }
       @media screen and (max-width: 344px) {
         .btn-download {
@@ -3233,6 +3241,11 @@
         line-height: 37px;
         margin-bottom: 13px;
       }
+      .dialog-title,
+      .submit-num {
+        font-weight: 600;
+        font-size: 16px;
+      }
       .footer .footer-link,
       .footer .footer-plain {
         display: block;
@@ -3240,6 +3253,125 @@
       .footer .footer-link {
         height: 34px;
         line-height: 34px;
+      }
+      .dialog-warper-footer {
+        z-index: 1000;
+        width: 480px;
+        max-width: 80%;
+        background: #fff;
+        border-radius: 4px;
+        left: 50%;
+        top: 50%;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      .dialog-header {
+        max-height: 100px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 24px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e6e9ec;
+      }
+      .dialog-title {
+        width: 360px;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #000;
+      }
+      .dialog-close {
+        cursor: pointer;
+      }
+      .header-dialog:before {
+        content: "";
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 12;
+        left: 0;
+        top: 0;
+      }
+      .submit-dialog {
+        width: 402px;
+        max-width: 80vw;
+        box-sizing: border-box;
+        min-height: 194px;
+        padding: 24px 50px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        z-index: 101;
+        border-radius: 8px;
+      }
+      .submit-content {
+        position: relative;
+      }
+      .submit-close,
+      .submit-num {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+      .submit-close {
+        right: -30px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+      .submit-num {
+        right: -2px;
+        line-height: 24px;
+        color: #7f8596;
+      }
+      .submit-icon {
+        height: 40px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .submit-icon img {
+        height: 100%;
+      }
+      .submit-title {
+        margin-top: 10px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #000;
+      }
+      .submit-footerTips,
+      .submit-subTitle {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+      }
+      .submit-subTitle {
+        margin-top: 10px;
+        color: #7f8596;
+      }
+      .submit-footerTips {
+        margin-top: 32px;
+        color: #dadce1;
+      }
+      .displayNone {
+        display: none !important;
+      }
+      .form-dialog-content {
+        padding: 24px;
+        box-sizing: border-box;
+        height: 70vh;
+        overflow-y: auto;
       }
       .image-cap {
         position: relative;
@@ -33477,6 +33609,882 @@
       }
     </style>
     <style>
+      .dispatch {
+        margin-top: 60px;
+        min-width: 1004px;
+      }
+      .dispatch ul {
+        padding: 0;
+      }
+      .dispatch .flex {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .dispatch .dispatch-bg-img {
+        height: 440px;
+        background-image: url(/assets/img/dispatch/bg-1@2x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        overflow: hidden;
+      }
+      .dispatch .diapatch-logo-box {
+        height: 50px;
+        width: 200px;
+        margin: 131px auto 0;
+      }
+      .dispatch .diapatch-logo-box img {
+        height: 100%;
+      }
+      .dispatch .diapatch_logo {
+        height: 60px;
+      }
+      .dispatch .dispatch-title {
+        width: 656px;
+        margin: 16px auto 0;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      .dispatch .dispatch-title h2 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 65px;
+        color: #fff;
+        padding: 0;
+      }
+      .dispatch .dispatch-subtitle {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+        padding: 0;
+      }
+      .dispatch .dispatch-sign-btn,
+      .dispatch .dispatch-start-btn {
+        margin-top: 32px;
+        font-weight: 500;
+        border-radius: 4px;
+        color: #fff;
+        height: 43px;
+        cursor: pointer;
+      }
+      .dispatch .dispatch-start-btn {
+        width: 189px;
+        line-height: 43px;
+        text-align: center;
+        background: #0a8dd1;
+        font-size: 14px;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-content,
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-title,
+      .dispatch .dispatch-content-subtitle,
+      .dispatch .dispatch-desc span {
+        line-height: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+      }
+      .dispatch .dispatch-sign-btn {
+        margin-left: 30px;
+        box-sizing: border-box;
+        width: 190px;
+        border: 1px solid #fff;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-decoration: none !important;
+      }
+      .dispatch .start-btn-list .dispatch-sign-btn {
+        color: #0a8dd1;
+        border: 1px solid #0a8dd1;
+      }
+      .dispatch .dispatch-desc {
+        text-align: center;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 270px;
+        background-image: url(/assets/img/dispatch/bg-2@2x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+      .dispatch .dispatch-desc span {
+        width: 841px;
+        margin: 0 auto;
+        font-size: 25px;
+        font-weight: 300;
+        color: #fff;
+        padding: 0;
+      }
+      .dispatch .dispatch-content {
+        background: #fff;
+      }
+      .dispatch .dispatch-content-title {
+        padding-top: 100px;
+        padding-bottom: 24px;
+        background: #fff;
+        text-align: center;
+        width: 970px;
+        margin: 0 auto;
+        color: #1d2e42;
+        font-size: 34px;
+        font-weight: 500;
+        font-stretch: normal;
+      }
+      .dispatch .dispatch-content-list {
+        margin: 0 auto;
+      }
+      .dispatch .dispatch-content-list .dispatch-content-item {
+        height: 320px;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-img {
+        width: 400px;
+        height: 220px;
+        margin-right: 80px;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-img
+        img {
+        width: 380px;
+        box-shadow: 0 0 27px 0 rgba(0, 0, 0, 0.11);
+        object-fit: cover;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-spec-img {
+        height: 258px;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-spec-img
+        img {
+        margin-left: 21px;
+        width: 320px;
+        height: 258px;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-desc {
+        width: 400px;
+        text-align: left;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-box {
+        width: 870px;
+        margin: 0 auto;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+      }
+      .dispatch .dispatch-content-list .dispatch-content-item:nth-child(even) {
+        background: #f4f5f6;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item:nth-child(even)
+        .dispatch-item-box {
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item:nth-child(even)
+        .dispatch-item-img {
+        width: 380px;
+        margin-right: 0;
+        margin-left: 70px;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-title {
+        width: 290px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #1d2e42;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-subtitle {
+        margin-top: 6px;
+        font-size: 16px;
+        font-weight: 400;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #7f8596;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-item
+        .dispatch-item-content {
+        margin-top: 32px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #1d2e42;
+      }
+      .dispatch .dispatch-content-list .dispatch-content-spec-item {
+        height: 329px;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-spec-item
+        .dispatch-item-img {
+        width: 380px;
+        height: 276px;
+      }
+      .dispatch
+        .dispatch-content-list
+        .dispatch-content-spec-item
+        .dispatch-item-img
+        img {
+        height: 100%;
+      }
+      .dispatch .dispatch-content-subtitle {
+        padding: 60px 0;
+        font-size: 34px;
+        font-weight: 500;
+        text-align: center;
+        color: #1d2e42;
+      }
+      .dispatch .dispatch-get-btn {
+        margin-top: 60px;
+      }
+      .dispatch .dispatch-get {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding-bottom: 100px;
+      }
+      .dispatch .dispatch-get-list {
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 349px;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .dispatch .dispatch-get-item {
+        width: 307px;
+        padding: 64px 24px;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border: 1px solid #dadce1;
+        border-radius: 7px;
+      }
+      .dispatch .dispatch-get-item img {
+        height: 110px;
+        width: 110px;
+        margin: 0 auto;
+      }
+      .dispatch .dispatch-get-item:nth-child(2) {
+        margin: 0 24px;
+      }
+      .dispatch .dispatch-get-item:hover {
+        border-color: #0a8dd1;
+        box-shadow: 1px 1px 20px 0 rgba(10, 141, 209, 0.13);
+      }
+      .dispatch .dispatch-get-item .dispatch-get-item-desc > div:last-child {
+        margin-top: 12px;
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 23px;
+        letter-spacing: normal;
+        text-align: center;
+        color: #1d2e42;
+      }
+      .dispatch .dispatch-get-item .diapatch-get-item-title {
+        margin-top: 24px;
+        font-size: 20px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #1d2e42;
+      }
+      .dispatch .dispatch-pricing {
+        height: 560px;
+        background: url(/assets/img/dispatch/pricing.png) center center
+          no-repeat;
+        background-size: cover;
+        overflow: hidden;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-bg {
+        width: 858px;
+        margin: 80px auto 0;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-title {
+        margin-top: 80px;
+        margin-left: 44px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+      }
+      .dispatch .dispatch-pricing h3 {
+        width: 308px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 46px;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-content {
+        margin-top: 31px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: start;
+        align-items: flex-start;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-left-only {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+        color: #227faf;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-left {
+        box-sizing: border-box;
+        width: 300px;
+        background: url(/assets/img/dispatch/pricing-5@2x.png) center top
+          no-repeat;
+        background-size: 300px 300px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 60px;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+      }
+      .dispatch
+        .dispatch-pricing
+        .dispatch-pricing-left
+        .dispatch-pricing-left-title {
+        height: 115px;
+        line-height: 115px;
+        width: 121px;
+        color: #227faf;
+        font-size: 50px;
+        font-weight: 500;
+      }
+      .dispatch
+        .dispatch-pricing
+        .dispatch-pricing-left
+        .dispatch-pricing-left-per {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+        color: #227faf;
+      }
+      .dispatch
+        .dispatch-pricing
+        .dispatch-pricing-left
+        .dispatch-pricing-left-content {
+        font-size: 12px;
+        color: #fff;
+        margin-top: 70px;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-right {
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 19px;
+        width: 506px;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .dispatch
+        .dispatch-pricing
+        .dispatch-pricing-right
+        > ul:last-child
+        li:last-child::before,
+      .hbspt-form-bg {
+        display: none;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-right li {
+        padding: 3px 0 0 32px;
+        position: relative;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        width: 222px;
+        margin-top: 20px;
+        line-height: 19px;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-right li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background: url(/assets/img/dispatch/icon-check.svg) center center
+          no-repeat;
+        background-size: 100% 100%;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-right li:first-child {
+        margin-top: 0;
+      }
+      .dispatch .dispatch-pricing .dispatch-pricing-right > ul:first-child li {
+        width: 214px;
+      }
+      .dispatch
+        .dispatch-pricing
+        .dispatch-pricing-right
+        > ul:last-child
+        li:last-child {
+        padding-left: 0;
+        margin-top: 0;
+      }
+      .dispatch
+        .dispatch-pricing
+        .dispatch-pricing-right
+        > ul:last-child
+        li:last-child
+        .dispatch-start-btn {
+        background: #fff;
+        margin-top: 27px;
+        color: #0a8dd1;
+      }
+      .dispatch
+        .dispatch-pricing
+        .dispatch-pricing-right
+        > ul:last-child
+        li:last-child
+        .dispatch-sign-btn {
+        margin-left: 0;
+      }
+      .tpweb-noscroll-truckpath {
+        height: 100vh;
+        overflow: hidden;
+      }
+      .tpweb-noscroll-truckpath > div[class] {
+        z-index: -1;
+      }
+      .tpweb-noscroll-truckpath > div {
+        z-index: 999;
+      }
+      @media screen and (max-width: 960px) {
+        .tpweb-noscroll-truckpath .hbspt-form-bg {
+          background-color: #fff !important;
+        }
+      }
+      .tpweb-noscroll-truckpath .hbspt-form-bg {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: -ms-flexbox;
+        display: flex;
+        overflow: auto;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      @media screen and (min-width: 960px) {
+        .tpweb-noscroll-truckpath .hbspt-form-bg .hbspt-form-container,
+        .tpweb-noscroll-truckpath .hbspt-form-bg .split {
+          width: 600px !important;
+        }
+        .tpweb-noscroll-truckpath .hbspt-form-bg .hbspt-form-container {
+          margin: 80px 0;
+          border-radius: 2px;
+        }
+        .tpweb-noscroll-truckpath .hbspt-form-bg .title {
+          width: 360px;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        .tpweb-noscroll-truckpath .hbspt-form-container,
+        .tpweb-noscroll-truckpath .split {
+          width: 100vw !important;
+        }
+        .tpweb-noscroll-truckpath .title {
+          width: 300px;
+        }
+      }
+      .tpweb-noscroll-truckpath .hbspt-form-container {
+        box-sizing: border-box;
+        position: relative;
+        padding: 113px 24px 0;
+        background-color: #fff;
+        z-index: 200;
+        -ms-flex-item-align: safe center;
+        -ms-grid-row-align: safe center;
+        align-self: safe center;
+      }
+      .tpweb-noscroll-truckpath .hbspt-form-container .title {
+        line-height: 24px;
+        font-weight: 600;
+        position: absolute;
+        left: 24px;
+        top: 24px;
+      }
+      .tpweb-noscroll-truckpath .hbspt-form-container .close {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        cursor: pointer;
+      }
+      .tpweb-noscroll-truckpath .hbspt-form-container .split {
+        border-bottom: #e6e9ec solid 1px;
+        position: absolute;
+        left: 0;
+        top: 88px;
+      }
+      .tpweb-noscroll-truckpath .hbspt-form-container .hs-form-iframe {
+        background-color: #fff;
+      }
+      .tpweb-noscroll-truckpath * {
+        z-index: -1;
+      }
+      @media (max-width: 736px) {
+        .dispatch {
+          margin-top: 0;
+          min-width: auto;
+        }
+        .dispatch .dispatch-bg-img {
+          height: 285px;
+          overflow: hidden;
+        }
+        .dispatch .diapatch-logo-box {
+          margin-top: 33px;
+          height: 24px;
+          width: 95px;
+        }
+        .dispatch .dispatch-title {
+          margin-top: 26px;
+          width: 322px;
+          text-align: center;
+        }
+        .dispatch .dispatch-title h2 {
+          font-size: 28px;
+          line-height: 35px;
+          height: 84px;
+        }
+        .dispatch .dispatch-subtitle {
+          font-size: 14px;
+          margin-top: 0;
+          font-weight: 300;
+        }
+        .dispatch .dispatch-sign-btn,
+        .dispatch .dispatch-start-btn {
+          width: 160px;
+          font-size: 16px;
+          margin-top: 24px;
+        }
+        .dispatch .dispatch-desc {
+          height: 196px;
+        }
+        .dispatch .dispatch-desc span {
+          width: 345px;
+          font-size: 14px;
+        }
+        .dispatch .dispatch-content-title {
+          padding-top: 50px;
+          width: 343px;
+          font-size: 24px;
+        }
+        .dispatch .dispatch-content-list .dispatch-content-item {
+          height: auto;
+          padding: 32px 16px;
+          box-sizing: border-box;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item:nth-child(even)
+          .dispatch-item-box {
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item:nth-child(even)
+          .dispatch-item-img {
+          margin-left: 0;
+          width: auto;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-img {
+          width: auto;
+          height: 199px;
+          margin-right: 0;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-img
+          img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-box {
+          width: auto;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-title {
+          width: auto;
+          font-size: 16px;
+          margin-top: 32px;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-subtitle {
+          font-size: 12px;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-content {
+          margin-top: 24px;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-desc {
+          width: auto;
+          text-align: center;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-spec-img {
+          height: 258px;
+          margin-left: 6px;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item
+          .dispatch-item-spec-img
+          img {
+          box-shadow: none;
+          width: 100%;
+          margin-left: 0;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item.dispatch-content-spec-item {
+          height: auto;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item.dispatch-content-spec-item
+          .dispatch-item-img {
+          width: 343px;
+          height: 243px;
+        }
+        .dispatch
+          .dispatch-content-list
+          .dispatch-content-item.dispatch-content-spec-item
+          .dispatch-item-img
+          img {
+          box-shadow: none;
+          object-fit: contain;
+        }
+        .dispatch .dispatch-content-subtitle {
+          padding-top: 50px;
+          padding-bottom: 32px;
+          font-size: 24px;
+        }
+        .dispatch .dispatch-get {
+          padding-bottom: 50px;
+        }
+        .dispatch .dispatch-get .dispatch-sign-btn,
+        .dispatch .dispatch-get .dispatch-start-btn {
+          display: none;
+        }
+        .dispatch .dispatch-get-list {
+          -ms-flex-direction: column;
+          flex-direction: column;
+          height: auto;
+          padding: 0 16px;
+          box-sizing: border-box;
+        }
+        .dispatch .dispatch-get-item {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 20px;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+        .dispatch .dispatch-get-item img {
+          height: 80px;
+          width: 80px;
+          margin: 0;
+        }
+        .dispatch .dispatch-get-item .dispatch-get-item-desc {
+          margin-top: 0;
+          margin-left: 16px;
+        }
+        .dispatch .dispatch-get-item .dispatch-get-item-desc > div:last-child {
+          margin-top: 6px;
+        }
+        .dispatch .dispatch-get-item .diapatch-get-item-title {
+          margin-top: 0;
+          font-size: 16px;
+        }
+        .dispatch .dispatch-get-item:nth-child(2) {
+          margin: 0;
+          -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+        }
+        .dispatch .dispatch-get-item:nth-child(2) .dispatch-get-item-desc {
+          margin-left: 0;
+          margin-right: 16px;
+        }
+        .dispatch .dispatch-get-item + .dispatch-get-item {
+          margin-top: 16px;
+        }
+        .dispatch .dispatch-pricing {
+          height: auto;
+          padding-bottom: 50px;
+        }
+        .dispatch .dispatch-pricing .dispatch-pricing-title {
+          margin-top: 0;
+          margin-left: 0;
+          -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+        }
+        .dispatch .dispatch-pricing .dispatch-pricing-title img {
+          height: 24px;
+          width: 95px;
+        }
+        .dispatch .dispatch-pricing h3 {
+          width: 100%;
+          font-size: 24px;
+          margin: 8px auto 0 0;
+          text-align: center;
+          padding: 0;
+        }
+        .dispatch .dispatch-pricing .dispatch-pricing-bg {
+          width: 100%;
+          margin-top: 50px;
+        }
+        .dispatch .dispatch-pricing .dispatch-pricing-content {
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+        .dispatch .dispatch-pricing .dispatch-pricing-right {
+          width: 100%;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-align: center;
+          align-items: center;
+          padding-top: 24px;
+        }
+        .dispatch .dispatch-pricing .dispatch-pricing-right ul:last-child {
+          margin-top: 20px;
+        }
+        .dispatch
+          .dispatch-pricing
+          .dispatch-pricing-right
+          ul:last-child
+          li:last-child {
+          margin-top: 0;
+        }
+        .dispatch
+          .dispatch-pricing
+          .dispatch-pricing-right
+          ul:last-child
+          li:last-child
+          .dispatch-start-btn {
+          margin-top: 32px;
+          width: 189px;
+        }
+        .dispatch
+          .dispatch-pricing
+          .dispatch-pricing-right
+          ul:last-child
+          li:last-child
+          .dispatch-sign-btn {
+          margin-top: 24px;
+          width: 189px;
+        }
+        .dispatch .dispatch-pricing .dispatch-pricing-content {
+          margin-top: 24px;
+        }
+        .tpweb-noscroll-truckpath * {
+          z-index: 0;
+        }
+      }
+    </style>
+    <style>
       .ea {
         width: 100%;
         height: 0;
@@ -33507,7 +34515,7 @@
     </style>
   </head>
   <body
-    class="option-sidebar option-homepage option-opinions option-os-android"
+    class="option-sidebar option-additional option-cmd-dispatch option-os-osx"
   >
     <div style="position: fixed; bottom: 0; right: 0; z-index: 1000">
       <div id="app" style="position: relative"></div>
@@ -33828,6 +34836,10 @@
                 .menu-v2 {
                   display: none !important;
                 }
+              }
+              .visibilityBtn {
+                visibility: hidden;
+                pointer-events: none;
               }
               .displayNone {
                 display: none !important;
@@ -34688,7 +35700,7 @@
                   </div>
                 </div>
               </div>
-              <div class="demo-btn displayNone">Get a Demo</div>
+              <div class="demo-btn displayNone visibilityBtn">Get a Demo</div>
               <div class="demo-tel displayNone">
                 <img src="/assets/img/menu-v2/nav-v2-phone-icon.svg" /><a
                   href="tel:+1 (208) 912-2269"
@@ -34773,14 +35785,6 @@
                   "f7a8e74f-3cdf-421b-bbb3-5a0bac2a0463",
                   "6a40b63e-9e7c-4c3e-b177-7ae09c6940c2",
                 ];
-                formIdList.forEach(function (item, index) {
-                  hbspt.forms.create({
-                    region: "na1",
-                    portalId: "6474818",
-                    formId: item,
-                    target: "#form" + (index + 1),
-                  });
-                });
                 var formIndex = 0;
                 for (let i = 0; i < handlerItem.length; i++) {
                   handlerItem[i].addEventListener("click", function () {
@@ -34792,12 +35796,20 @@
                   });
                 }
                 nextBtn.addEventListener("click", function () {
+                  // handlerContent.classList.add(hiddenClass)
+                  dialogDialog.classList.add(hiddenClass);
                   console.log(formIndex);
-                  console.log(1231231);
-                  handlerContent.classList.add(hiddenClass);
-                  dialogForm[formIndex].classList.remove(hiddenClass);
+                  window.showHbsptForm({
+                    title:
+                      "See how Trucker Path’s platform can scale up your trucking company",
+                    target: "mainHbs" + formIndex,
+                    width: 480,
+                  });
                 });
                 function menuClose() {
+                  // window.closeHbsptForm({
+                  // target: 'mainHbs' + formIndex
+                  // })
                   dialogDialog.classList.add(hiddenClass);
                   var selectNode =
                     document.getElementsByClassName(selectClass)[0];
@@ -34807,16 +35819,8 @@
                   dialogForm[0].classList.add(hiddenClass);
                   dialogForm[1].classList.add(hiddenClass);
                   handlerContent.classList.remove(hiddenClass);
-                }
-                window.addEventListener("message", function (event) {
-                  console.log(1231231, event);
-                  if (
-                    event.data.type === "hsFormCallback" &&
-                    event.data.eventName === "onFormSubmitted"
-                  ) {
-                    menuClose();
-                  }
-                });
+                } // window.addEventListener('message', function(event){// if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted'){// menuClose()
+                // }// });
                 dialogClose.addEventListener("click", menuClose);
                 var m2 = document.getElementsByClassName("menu-v2")[0];
                 var els = document.getElementsByClassName("level1-warp");
@@ -34833,7 +35837,9 @@
                 for (var i = 0; i < els.length; i++) {
                   els[i].addEventListener("mouseenter", showCover);
                   els[i].addEventListener("mouseleave", hideCover);
-                } // coverFooter.addEventListener("mouseenter", hideCover)
+                }
+                var isFirst = true;
+                // coverFooter.addEventListener("mouseenter", hideCover)
                 setTimeout(function () {
                   var demoBth = document.getElementsByClassName("demo-btn");
                   console.log(demoBth);
@@ -34846,6 +35852,17 @@
                         document.body.classList.add("tpweb-noscroll-truckpath");
                       } else {
                         dialogDialog.classList.remove(hiddenClass);
+                        isFirst &&
+                          formIdList.forEach(function (item, index) {
+                            console.log(window);
+                            window.createHbsptForm({
+                              region: "na1",
+                              portalId: "6474818",
+                              formId: item,
+                              target: "mainHbs" + index,
+                            });
+                          });
+                        isFirst = false;
                         // window.callDemo()
                       }
                     });
@@ -34857,7 +35874,7 @@
                   document.getElementsByClassName("demo-tel")[0];
                 console.log(telBtnHeader);
                 if (["/dispatch"].indexOf(window.location.pathname) !== -1) {
-                  console.log(telBtnHeader);
+                  // console.log(telBtnHeader)
                   telBtnHeader.classList.remove("displayNone");
                 } else {
                   demoBthHeader.classList.remove("displayNone");
@@ -34892,865 +35909,276 @@
       </div>
     </div>
     <!-- <div class=move-to-top></div> -->
-    <div class="fakebody" style="z-index: 0">
-      <div id="sms-modal" class="modal modal_bottom modal_center js-modal">
-        <div class="modal__close js-modal-close"></div>
-        <div class="section section_sms-modal">
-          <div class="send-sms forms">
-            <div class="send-sms__heading">Send SMS to Download</div>
-            <div class="send-sms__container forms-content">
-              <form
-                id="sms-form"
-                action="/api/sms/index"
-                class="fields-box block send-sms__form"
-              >
-                <div class="fieldset">
-                  <div class="field-item send-sms__input required">
-                    <input name="phone" placeholder="Your phone" />
-                  </div>
-                </div>
-                <div class="fieldset fieldset-last">
-                  <div class="field-item field-button send-sms__submit">
-                    <a href="#submit" class="default-button form-submit">Send</a
-                    ><span class="button-loader"></span>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="send-sms__example js-sms-example">
-              Example: +1 2223334455 or 2223334455
-            </div>
-            <div class="send-sms__success js-sms-success">
-              <img src="/assets/img/checkmark.png" />Link to download sent
-              successfully
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="fullwidth core-elements blue-content index-head index-head-dark"
-      >
-        <div class="container_10">
-          <!-- <h1>The Future of Trucking is Here</h1> -->
-          <h1>The Future of Trucking is Here</h1>
-          <div class="default-button demo-btn mobile_visible">Get a Demo</div>
-          <div class="index-head-columns">
-            <div class="index-head-left">
-              <a
-                data-mpevent="1001"
-                href="#"
-                class="index-head-scroll-button scroll-to-tpp"
-                ><div class="index-head-sign">Trucker Path</div>
-                <div class="index-head-text">
-                  Leading mapping and navigation app
-                </div></a
-              ><a
-                data-mpevent="1001"
-                href="#"
-                class="index-head-scroll-button scroll-to-tp"
-                ><div class="index-head-sign">Trucker Path DISPATCH</div>
-                <div class="index-head-text">Personal dispatch service</div></a
-              >
-            </div>
-            <div class="index-head-center">
-              <!-- <img src="/assets/img/index/index-header.png" class=headr-map-img /> --><img
-                src="/assets/img/index/head-phone-ios.png"
-                alt=""
-                class="head-phone-ios"
-              /><img
-                src="/assets/img/index/head-phone-android.png"
-                alt=""
-                class="head-phone-android head-phone-ztop"
+    <div class="fakebody">
+      <!-- <script charset=utf-8 type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script> -->
+      <div class="dispatch">
+        <div class="dispacth-header">
+          <div class="dispatch-bg-img">
+            <div class="diapatch-logo-box">
+              <img
+                src="/assets/img/dispatch/dispatch-logo-dark.svg"
+                class="diapatch_logo"
               />
             </div>
-            <div class="index-head-right">
-              <a
-                data-mpevent="1002"
-                href="#"
-                class="index-head-scroll-button scroll-to-tl"
-                ><div class="index-head-sign">TruckLoads</div>
-                <div class="index-head-text">
-                  Helping carriers to find and move freight
-                </div></a
-              ><a
-                data-mpevent="1002"
-                href="#"
-                class="index-head-scroll-button scroll-to-tm"
-                ><div class="index-head-sign">Trucker Path COMMAND</div>
-                <div class="index-head-text">A new kind of TMS</div></a
+            <div class="flex dispatch-title">
+              <h2>More money. Fewer hassles.</h2>
+              <span class="dispatch-subtitle"
+                >We do the back-office work. You handle the driving.</span
               >
-            </div>
-          </div>
-        </div>
-        <div class="index-head-graphic-container">
-          <div class="index-head-graphic-tonality"></div>
-          <div id="index-yt-bg" class="index-head-video"></div>
-        </div>
-      </div>
-      <div class="fullwidth core-elements index-tpp">
-        <div class="container_10">
-          <h2>Trucker Path</h2>
-          <div class="index-tpp-text">
-            America’s most popular app for truck drivers. Millions of truckers
-            all over the country use Trucker Path to find the closest truck
-            stop, available parking, weigh station, fuel stops, trip planning
-            and truck-safe routing. Join the community of over 1 million active
-            drivers today!
-          </div>
-          <div class="index-tpp-brief mobile_hidden">
-            <div class="index-tpp-brief_item">
-              <div class="index-tpp-brief_title">8M+</div>
-              <div class="index-tpp-brief_desc">App downloads</div>
-            </div>
-            <div class="index-tpp-brief_item">
-              <div class="index-tpp-brief_title">700M+</div>
-              <div class="index-tpp-brief_desc">Truck-safe miles routed</div>
-            </div>
-            <div class="index-tpp-brief_item">
-              <div class="index-tpp-brief_title">4M+</div>
-              <div class="index-tpp-brief_desc">
-                Community generated updates
-              </div>
-            </div>
-            <div class="index-tpp-brief_item">
-              <div class="index-tpp-brief_title">500K+</div>
-              <div class="index-tpp-brief_desc">Local business partners</div>
-            </div>
-          </div>
-          <div class="index-tpp-columns-box">
-            <div class="index-tpp-columns">
-              <div class="index-tpp-left">
-                <img src="/assets/img/index/index-tpp-phones@2x.png" alt="" />
-              </div>
-              <div class="index-tpp-right">
-                <div class="index-tpp-icon-item">
-                  <svg
-                    width="50"
-                    height="50"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g fill="none" fill-rule="evenodd">
-                      <path
-                        fill="#8FA5BF"
-                        d="M23.324 29.47v6.33h-1v-3.398c0-1.104.373-2.12 1-2.931zM20.946 13l5.946 7.212h-3.568v3.361a9.63 9.63 0 0 0-4.757 4.528v-7.89H15L20.946 13z"
-                      />
-                      <path
-                        fill="#8FA5BF"
-                        d="m29.865 23.77-1.738.005a9.593 9.593 0 0 0-9.56 9.594V37h4.757v-3.598a4.797 4.797 0 0 1 4.797-4.796h1.744v3.597L37 26.208l-7.135-5.996v3.557z"
-                      />
-                      <circle
-                        stroke="#8FA5BF"
-                        stroke-width="4"
-                        cx="25"
-                        cy="25"
-                        r="23"
-                      />
-                    </g>
-                  </svg>
-                  Truck GPS
-                </div>
-                <div class="index-tpp-icon-item">
-                  <svg
-                    width="50"
-                    height="50"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g fill="none" fill-rule="evenodd">
-                      <path
-                        d="m31 15 1 6h1v3h-1v3a1 1 0 0 1 1 1v5h-2v2h-2v-2h-8v2h-2v-2h-2v-5a1 1 0 0 1 1-1v-3h-1v-3h1l1-6h12zm-3 12h-6v5h6v-5zm3 3h-2v2h2v-2zm-10 0h-2v2h2v-2zm9-10H20l-1 4h12l-1-4z"
-                        fill="#8FA5BF"
-                      />
-                      <g transform="translate(2 2)">
-                        <circle
-                          stroke="#8FA5BF"
-                          stroke-width="4"
-                          cx="23"
-                          cy="23"
-                          r="23"
-                        />
-                        <path
-                          d="M17.5 2h11l-4.813 4.72a.986.986 0 0 1-1.375 0L17.5 2zM17.5 44h11l-4.813-4.72a.986.986 0 0 0-1.375 0L17.5 44z"
-                          fill="#8FA5BF"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                  Truck restrictions
-                </div>
-                <div class="index-tpp-icon-item">
-                  <img src="/assets/img/index/tpp-icon-truckstop@2x.png" />
-                  Truck stops
-                </div>
-                <div class="index-tpp-icon-item">
-                  <img src="/assets/img/index/tpp-icon-ws@2x.png" alt="" />
-                  Weigh stations
-                </div>
-                <div class="index-tpp-icon-item">
-                  <img src="/assets/img/index/tpp-icon-parking@2x.png" alt="" />
-                  Truck parking
-                </div>
-                <div class="index-tpp-icon-item">
-                  <img src="/assets/img/index/tpp-icon-fuel@2x.png" alt="" />
-                  Fuel stations
-                </div>
+              <div class="flex">
+                <div class="dispatch-start-btn">Contact Me</div>
                 <a
-                  data-mpevent="1005"
-                  href="/trucker-path-app/"
-                  class="learn-more"
-                  >Learn more
-                  <svg
-                    width="16"
-                    height="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill="#0A8DD1"
-                      fill-rule="nonzero"
-                      d="M4.793 3.053 6.207 1.64l6.364 6.364-6.364 6.364-1.414-1.414 4.949-4.949z"
-                    /></svg
-                ></a>
-                <div class="index-tpp-links">
-                  <span
-                    data-mpevent="1068"
-                    id="sms-modal-trigger"
-                    class="default-button button-black"
-                    ><p class="mobile_hidden">SMS to Download</p>
-                    <span class="icon-apple-google"></span
-                  ></span>
-                  <div id="tp_home_premium" class="tp-premium default-button">
-                    Trucker Path Premium
+                  class="dispatch-sign-btn"
+                  href="https://www.truckerpathdispatch.com/Account/Login/Register?returnUrl=%2Fcarrier_registration%2F"
+                  >Sign Me Up</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="dispatch-desc">
+            <span
+              >Over a million drivers depend on the Trucker Path app for help on
+              the road. Now, our expert personal Dispatchers are here for Dry
+              Van, Flatbed, Conastoga, Step Deck and Reefer drivers to make your
+              job easier and make you more money!
+            </span>
+          </div>
+        </div>
+        <div class="dispatch-content">
+          <h3 class="container_10 dispatch-content-title">How Does It Work?</h3>
+          <div class="dispatch-content-list">
+            <div class="flex dispatch-content-item">
+              <div class="dispatch-item-box">
+                <div class="dispatch-item-img">
+                  <img src="/assets/img/dispatch/img-1@2x.png" />
+                </div>
+                <div class="dispatch-item-desc">
+                  <div class="dispatch-item-title">Getting Acquainted</div>
+                  <div class="dispatch-item-subtitle">
+                    Share preferences with your Dispatcher
+                  </div>
+                  <div class="dispatch-item-content">
+                    It’s our job to make your job as profitable and hassle-free
+                    as possible. That begins with no forced dispatch and you
+                    telling your personal Dispatcher the types of jobs and work
+                    schedules you like…and don’t like!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex dispatch-content-item">
+              <div class="dispatch-item-box">
+                <div class="dispatch-item-img">
+                  <img src="/assets/img/dispatch/img-2@2x.png" />
+                </div>
+                <div class="dispatch-item-desc">
+                  <div class="dispatch-item-title">
+                    Load Sourcing & Negotiation
+                  </div>
+                  <div class="dispatch-item-subtitle">
+                    Getting you extra revenue per mile.
+                  </div>
+                  <div class="dispatch-item-content">
+                    Armed with your preferences, powerful Artificial
+                    Intelligence (AI) and the millions of datapoints we collect
+                    from our many platforms, your Dispatcher finds you the dry
+                    van and reefer loads you want at rates you really want.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex dispatch-content-item">
+              <div class="dispatch-item-box">
+                <div class="dispatch-item-img">
+                  <img src="/assets/img/dispatch/img-3@2x.png" />
+                </div>
+                <div class="dispatch-item-desc">
+                  <div class="dispatch-item-title">Real Truck Navigation</div>
+                  <div class="dispatch-item-subtitle">
+                    Enjoy the quickest, safest routes
+                  </div>
+                  <div class="dispatch-item-content">
+                    Your personal Dispatcher next sends all the info you need
+                    for the job directly to your Trucker Path app including
+                    pickup/dropoff locations, timing windows and any special
+                    instructions. Our best-in-class navigation engine routes you
+                    for the quickest and safest path.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex dispatch-content-item">
+              <div class="dispatch-item-box">
+                <div class="dispatch-item-img">
+                  <img src="/assets/img/dispatch/img-4@2x.png" />
+                </div>
+                <div class="dispatch-item-desc">
+                  <div class="dispatch-item-title">
+                    Real-Time Status Reporting
+                  </div>
+                  <div class="dispatch-item-subtitle">
+                    No more “Where are you” calls
+                  </div>
+                  <div class="dispatch-item-content">
+                    Where are you? What’s your ETA? These check calls and
+                    questions from customers take time and energy. Your
+                    Dispatcher and our real-time reporting data combine to keep
+                    everyone informed and up to speed, easily and without
+                    interruptions.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex dispatch-content-item">
+              <div class="dispatch-item-box">
+                <div class="dispatch-item-img dispatch-item-spec-img">
+                  <img src="/assets/img/dispatch/img-5@2x.png" />
+                </div>
+                <div class="dispatch-item-desc">
+                  <div class="dispatch-item-title">Compliance Monitoring</div>
+                  <div class="dispatch-item-subtitle">
+                    Make the most of your available hours-of-service
+                  </div>
+                  <div class="dispatch-item-content">
+                    While you’re doing what you're supposed to be doing,
+                    driving, your personal Dispatcher will be monitoring your
+                    available hours. They’ll be looking ahead for a good place
+                    for you to shutdown for the day or for your next loads. It’s
+                    our responsibility to keep the wheels turnin’ so you keep
+                    earnin’.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex dispatch-content-item dispatch-content-spec-item">
+              <div class="dispatch-item-box">
+                <div class="dispatch-item-img">
+                  <img src="/assets/img/dispatch/img-6@2x.png" />
+                </div>
+                <div class="dispatch-item-desc">
+                  <div class="dispatch-item-title">
+                    Shut Down for the Day with Confidence & Ease
+                  </div>
+                  <div class="dispatch-item-subtitle">
+                    Save time & drive more miles
+                  </div>
+                  <div class="dispatch-item-content">
+                    Trucker Path offers well over 300,000 POIs and parking
+                    locations with up-to-date detailed information from our
+                    community of more than a million truckers. Your Dispatcher
+                    will look ahead for you, helping to find a great place to
+                    park and rest after a long shift.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex dispatch-content-item">
+              <div class="dispatch-item-box">
+                <div class="dispatch-item-img">
+                  <img src="/assets/img/dispatch/img-7@2x.png" />
+                </div>
+                <div class="dispatch-item-desc">
+                  <div class="dispatch-item-title">Digital Paperwork</div>
+                  <div class="dispatch-item-subtitle">
+                    To get you paid faster
+                  </div>
+                  <div class="dispatch-item-content">
+                    Submitting your paperwork is a huge part of getting paid.
+                    You’ll be able to easily scan your docs and submit them to
+                    your Dispatcher instantly using Trucker Path. After all, the
+                    faster you submit your paperwork, the faster you’ll get
+                    paid!
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="fullwidth core-elements index-cm index-cm-1 index-tp">
-        <div class="container_10">
-          <h2>Trucker Path DISPATCH</h2>
-          <div class="index-cm-desc">
-            Our expert personal dispatchers are here to make your job easier and
-            make you more money. Let us handle all the back-office work and get
-            you more revenue hauling loads so you can just concentrate on
-            driving.
-          </div>
-          <div class="index-tp-title">
-            3 Easy Steps To More Money and Less Hassle
-          </div>
-          <div class="index-tp-list">
-            <div>
-              <img src="/assets/img/index/tp1.png" />
-              <div>
-                Share your lane and commodity preferences. No forced dispatches!
+          <h3 class="container_10 dispatch-content-subtitle">
+            Getting started is easy
+          </h3>
+          <div class="container_10 dispatch-get">
+            <div class="dispatch-get-list">
+              <div class="dispatch-get-item">
+                <img src="/assets/img/dispatch/send-your-packet@2x.png" />
+                <div class="dispatch-get-item-desc">
+                  <div class="diapatch-get-item-title">Send Your Packet</div>
+                  <div>DOT Authority, Certificate of Insurance, W-9, etc.</div>
+                </div>
+              </div>
+              <div class="dispatch-get-item">
+                <img src="/assets/img/dispatch/sign-agreement@2x.png" />
+                <div class="dispatch-get-item-desc">
+                  <div class="diapatch-get-item-title">Sign Agreement</div>
+                  <div>
+                    Sign a quick and easy dispatch service level agreement
+                  </div>
+                </div>
+              </div>
+              <div class="dispatch-get-item">
+                <img src="/assets/img/dispatch/hit-the-road@2x.png" />
+                <div class="dispatch-get-item-desc">
+                  <div class="diapatch-get-item-title">Hit the road</div>
+                  <div>We start dispatching your truck immediately</div>
+                </div>
               </div>
             </div>
-            <div>
-              <img src="/assets/img/index/tp2.png" />
-              <div>
-                Your dispatcher finds the loads you want and negotiates great
-                rates.
-              </div>
-            </div>
-            <div>
-              <img src="/assets/img/index/tp3.png" />
-              <div>
-                Everything you need for the job goes straight to your Trucker
-                Path app. We handle the office work!
-              </div>
-            </div>
-          </div>
-          <div class="index-tp-footer">
-            <a class="default-button" href="/dispatch">View More</a
-            ><a class="default-button dispatch-start">Get Started</a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="fullwidth core-elements grey-content index-cm index-cm-1 index-cm-to"
-      >
-        <div class="container_10">
-          <h2>Trucker Path COMMAND</h2>
-          <div class="index-cm-desc">
-            If you’re a trucking fleet company looking to equip your drivers
-            with truck dispatching and navigation, we have an enterprise edition
-            built on top of the Trucker Path drivers know and love. Get a true
-            all-in-one fleet management system to grow your trucking fleet
-            today!
-          </div>
-          <div class="index-cm-content-groups">
-            <div class="index-cm-content">
-              <div class="index-cm-content-title">See it in Action</div>
-              <div class="index-cm-content-text">
-                Schedule a meeting with our team to see our full suite of
-                features designed to take your trucking fleet to the next level.
-                Industry-leading software now made available for fleets of all
-                sizes!
-              </div>
+            <div class="flex start-btn-list">
+              <div class="dispatch-start-btn">Contact Me</div>
               <a
-                data-mpevent="1006"
-                href="https://command.truckerpath.com/overview?point=TPhomepage&UTM_source=TPHomepage&UTM_content=TPhomepage_SeeItInAction"
-                class="default-button"
-                >See it in action</a
-              >
-            </div>
-            <div class="index-cm-content">
-              <div class="index-cm-content-title">
-                Start Your Free Trial Now
-              </div>
-              <div class="index-cm-content-text">
-                Create an account and login to your own fleet management system
-                in 30 seconds. Equip your trucking fleet with the best-in-class
-                tools to deliver freight more efficiently.
-              </div>
-              <a
-                data-mpevent="1006"
-                href="/command/free-trial?UTM_source=TPHomepage&UTM_content=TPhomepage_CreateAccount"
-                class="default-button"
-                >Create Account</a
+                class="dispatch-sign-btn"
+                href="https://www.truckerpathdispatch.com/Account/Login/Register?returnUrl=%2Fcarrier_registration%2F"
+                >Sign Me Up</a
               >
             </div>
           </div>
-          <div class="tabs-container">
-            <div class="tab tab-active">
-              <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M11 17.22a1 1 0 0 1 .196.02L20 19l3.814-.762c.742 1.667 1.99 3.608 3.736 5.88l.584.75L30 27.197l1.866-2.33.584-.75c1.747-2.273 2.995-4.214 3.736-5.881l3.01.602a1 1 0 0 1 .804.98v19.934a1 1 0 0 1-1.217.977L31 39v-8a1 1 0 0 0-1.993-.117L29 31v8.364L20 41l-9.196-1.84a1 1 0 0 1-.804-.98V18.22a1 1 0 0 1 1-1zM20 22a1 1 0 0 0-.993.883L19 23v14a1 1 0 0 0 1.993.117L21 37V23a1 1 0 0 0-1-1zm10-12a5 5 0 0 1 5 5c0 1.84-1.667 4.84-5 9-3.333-4.16-5-7.16-5-9a5 5 0 0 1 5-5zm0 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+          <div class="dispatch-pricing">
+            <div class="dispatch-pricing-bg">
+              <div class="dispatch-pricing-title">
+                <h3>Pricing</h3>
+                <img
+                  src="/assets/img/dispatch/dispatch-logo-light.svg"
+                  class="diapatch_logo"
                 />
-              </svg>
-              <div class="text">Enterprise Truck Navigation</div>
-              <div class="arrow"></div>
-            </div>
-            <div class="tab">
-              <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M17 11v13l.006.112a1 1 0 0 0 1.619.669L23 21.28l4.375 3.5A1 1 0 0 0 29 24V11h8a1 1 0 0 1 1 1v18.414l-4.621 4.621-2.475-2.474-.15-.137c-1.058-.841-2.486-.763-3.386.137a2.5 2.5 0 0 0 0 3.535L31.272 40H9a1 1 0 0 1-1-1V12a1 1 0 0 1 1-1h8zm10 0v10.92l-3.375-2.7-.103-.073a1 1 0 0 0-1.147.072L19 21.92V11h8z"
-                />
-                <path
-                  d="M28.429 33.621a1 1 0 0 1 1.327-.077l.087.077 3.536 3.536 6.778-6.778a1 1 0 0 1 1.327-.078l.087.078a1 1 0 0 1 .078 1.327l-.078.087-7.485 7.485a1 1 0 0 1-1.327.078l-.087-.078-4.243-4.242a1 1 0 0 1 0-1.415z"
-                  fill-rule="nonzero"
-                />
-              </svg>
-              <div class="text">Manage and Dispatch Loads</div>
-              <div class="arrow"></div>
-            </div>
-            <div class="tab">
-              <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M41 17a1 1 0 0 1 .993.883L42 18v18a1 1 0 0 1-.883.993L41 37h-3v4l-5.6-4H21a1 1 0 0 1-.993-.883L20 36v-2h18a1 1 0 0 0 .993-.883L39 33V17h2zm-5-8a1 1 0 0 1 1 1v21a1 1 0 0 1-1 1H18.6L13 36v-4h-3a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1h26zm-13 5a1 1 0 0 0-.993.883L22 15v10a1 1 0 0 0 1.993.117L24 25V15a1 1 0 0 0-1-1zm-4 2a1 1 0 0 0-.993.883L18 17v6a1 1 0 0 0 1.993.117L20 23v-6a1 1 0 0 0-1-1zm8 0a1 1 0 0 0-.993.883L26 17v6a1 1 0 0 0 1.993.117L28 23v-6a1 1 0 0 0-1-1zm4 2a1 1 0 0 0-.993.883L30 19v2a1 1 0 0 0 1.993.117L32 21v-2a1 1 0 0 0-1-1zm-16 0a1 1 0 0 0-.993.883L14 19v2a1 1 0 0 0 1.993.117L16 21v-2a1 1 0 0 0-1-1z"
-                />
-              </svg>
-              <div class="text">Team Communication</div>
-              <div class="arrow"></div>
-            </div>
-            <div class="tab">
-              <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M37 32v8a1 1 0 0 1-1 1H13a1 1 0 0 1-1-1v-8h25zM28 9l9 9v10h2a1 1 0 0 1 0 2H10a1 1 0 0 1 0-2h2V10a1 1 0 0 1 1-1h15zm-1 14H16a1 1 0 0 0 0 2h11a1 1 0 0 0 0-2zm-5-4h-6a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2zm5.5-7.293a.5.5 0 0 0-.492.41l-.008.09V18.5a.5.5 0 0 0 .41.492l.09.008h6.293a.5.5 0 0 0 .411-.784l-.058-.07-6.292-6.292a.5.5 0 0 0-.354-.147z"
-                />
-              </svg>
-              <div class="text">Document Scanning</div>
-              <div class="arrow"></div>
-            </div>
-            <div class="tab">
-              <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m17.402 34.249 5.196 3-.855 1.48-4.243 1.35-.953-4.35.855-1.48zm9.752-20.893-14.434 25H10a1 1 0 0 1-1-1v-23a1 1 0 0 1 1-1h17.154zm12.846 0a1 1 0 0 1 1 1v23a1 1 0 0 1-1 1H24.268l14.434-25H40zm-11.598 1.84 5.196 3-10 17.32-5.196-3 10-17.32zM19 16.356h-6a1 1 0 0 0-.117 1.994l.117.007h6a1 1 0 1 0 0-2zm13.768-6.722 3.464 2A1 1 0 0 1 36.598 13l-2 3.464-5.196-3 2-3.464a1 1 0 0 1 1.366-.366z"
-                />
-              </svg>
-              <div class="text">White Labelled Solution</div>
-              <div class="arrow"></div>
+              </div>
+              <div class="dispatch-pricing-content">
+                <div class="dispatch-pricing-left">
+                  <span class="dispatch-pricing-left-only">Only</span
+                  ><span class="dispatch-pricing-left-title">$295</span
+                  ><span class="dispatch-pricing-left-per"
+                    >per week or Less!*</span
+                  ><span class="dispatch-pricing-left-content"
+                    >*Service charge:10% of gross revenues up to $2,950, or
+                    $295, whichever is less. Service charge of only 3% for gross
+                    revenues over $10,000.</span
+                  >
+                </div>
+                <div class="dispatch-pricing-right">
+                  <ul>
+                    <li>Personal Dispatcher</li>
+                    <li>Finding loads that fit you</li>
+                    <li>Negotiating awesome rates</li>
+                    <li>Full Trucker Path access</li>
+                    <li>True Truck Navigation</li>
+                    <li>Handing Track/Trace & Check Calls</li>
+                  </ul>
+                  <ul>
+                    <li>HoS Monitoring</li>
+                    <li>Assistance with finding Parking and Food</li>
+                    <li>Electronic Paperwork collection and storage</li>
+                    <li>
+                      <div class="dispatch-start-btn">Contact Me</div>
+                      <a
+                        class="dispatch-sign-btn"
+                        href="https://www.truckerpathdispatch.com/Account/Login/Register?returnUrl=%2Fcarrier_registration%2F"
+                        >Sign Me Up</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="fullwidth core-elements index-cm index-cm-2">
-        <div class="animate-wrapper container_10">
-          <div class="tabs-content-container tab-active">
-            <div class="items">
-              <div class="item">
-                <span class="point"></span>Get truck-safe navigation based on
-                your truck dimensions
-              </div>
-              <div class="item">
-                <span class="point"></span>See all truck-related restrictions on
-                map
-              </div>
-              <div class="item">
-                <span class="point"></span>Avoid tolls, unpaved roads, harsh
-                turns, U-turns, and more
-              </div>
-              <div class="item">
-                <span class="point"></span>Access real-time traffic conditions
-                and live road events
-              </div>
-              <div class="item"><span class="point"></span>Weather alerts</div>
-              <a
-                href="https://command.truckerpath.com/overview?point=TPhomepage&UTM_source=TPHomepage&UTM_content=TPhomepage_ViewMore"
-                class="default-button"
-                >View More</a
-              >
-            </div>
-            <img src="/assets/img/index/tab-content-1@2x.jpg" />
-          </div>
-          <div class="tabs-content-container">
-            <div class="items">
-              <div class="item">
-                <span class="point"></span>Import or create loads that can be
-                dispatched directly to Trucker Path app
-              </div>
-              <div class="item">
-                <span class="point"></span>Fully integrated dispatch and truck
-                navigation for a seamless driver experience
-              </div>
-              <div class="item">
-                <span class="point"></span>Capture key events during load
-                dispatch: heading to pick-up, arrived at pick-up, in detention,
-                loaded, and more.
-              </div>
-              <a
-                href="https://command.truckerpath.com/overview?point=TPhomepage&UTM_source=TPHomepage&UTM_content=TPhomepage_ViewMore"
-                class="default-button"
-                >View More</a
-              >
-            </div>
-            <img src="/assets/img/index/tab-content-2@2x.jpg" />
-          </div>
-          <div class="tabs-content-container">
-            <div class="items">
-              <div class="item">
-                <span class="point"></span>Communicate with your drivers that
-                are over the road
-              </div>
-              <div class="item">
-                <span class="point"></span>Messaging supports text, audio,
-                files, location pins
-              </div>
-              <div class="item">
-                <span class="point"></span>Read receipts and pings to ensure
-                your messages are heard
-              </div>
-              <div class="item">
-                <span class="point"></span>Group chats and individual messaging
-              </div>
-              <a
-                href="https://command.truckerpath.com/overview?point=TPhomepage&UTM_source=TPHomepage&UTM_content=TPhomepage_ViewMore"
-                class="default-button"
-                >View More</a
-              >
-            </div>
-            <img src="/assets/img/index/tab-content-3@2x.jpg" />
-          </div>
-          <div class="tabs-content-container">
-            <div class="items">
-              <div class="item">
-                <span class="point"></span>High quality document scanner for
-                drivers to capture paperwork
-              </div>
-              <div class="item">
-                <span class="point"></span>Capture your Bill of Ladings, Proof
-                of Delivery, CAT Scales, Fuel Receipts, and more
-              </div>
-              <div class="item">
-                <span class="point"></span>Process images into high resolution
-                PDF
-              </div>
-              <div class="item">
-                <span class="point"></span>Auto extract text from scans and
-                intelligently syncs with your load info
-              </div>
-              <a
-                href="https://command.truckerpath.com/overview?point=TPhomepage&UTM_source=TPHomepage&UTM_content=TPhomepage_ViewMore"
-                class="default-button"
-                >View More</a
-              >
-            </div>
-            <img src="/assets/img/index/tab-content-4@2x.jpg" />
-          </div>
-          <div class="tabs-content-container">
-            <div class="items">
-              <div class="item">
-                <span class="point"></span>Customize the driver app to reinforce
-                your branding and messaging to drivers
-              </div>
-              <div class="item">
-                <span class="point"></span>Upload your company logo, tagline,
-                and themes
-              </div>
-              <div class="item">
-                <span class="point"></span>Built-in company intranet, share
-                announcements and documents with your drivers
-              </div>
-              <a
-                href="https://command.truckerpath.com/overview?point=TPhomepage&UTM_source=TPHomepage&UTM_content=TPhomepage_ViewMore"
-                class="default-button"
-                >View More</a
-              >
-            </div>
-            <img src="/assets/img/index/tab-content-5@2x.png" />
-          </div>
-        </div>
-      </div>
-      <div class="fullwidth core-elements grey-content index-tl">
-        <div class="container_10">
-          <h2>TruckLoads</h2>
-          <div class="index-tl-text">
-            TruckLoads by Trucker Path helps carriers and owner operators move
-            freight via our mobile application and web portal. Thousands of
-            qualified carriers are searching through our platform to move the
-            loads posted by hundreds of freight companies. We are here to match
-            up the two.
-          </div>
-          <div class="index-tl-buttons">
-            <div class="index-tl-button-carriers">
-              <div class="index-tl-button-container">
-                <h3>For Carriers</h3>
-                <span class="index-tl-description"
-                  >We aggregate loads from brokers, 3PLs, shippers, so you have
-                  access to all the freight available at your fingertips</span
-                ><span class="index-tl-navigation"
-                  ><a
-                    data-mpevent="1006"
-                    href="/truckloads/free-load-board/"
-                    class="default-button"
-                    >Find Loads</a
-                  ><a
-                    data-mpevent="1007"
-                    href="https://app.appsflyer.com/com.truckerpath.truckloads?pid=website&c=homepage_carriers_promo"
-                    target="_blank"
-                    class="google-play"
-                  ></a
-                  ><a
-                    data-mpevent="1008"
-                    href="https://app.appsflyer.com/id1007287939?pid=website&c=homepage_carriers_promo"
-                    target="_blank"
-                    class="app-store"
-                  ></a
-                  ><a
-                    data-mpevent="1009"
-                    href="/truckloads/free-load-board/"
-                    class="learn-more"
-                    >Learn more</a
-                  ></span
-                >
-              </div>
-            </div>
-            <div class="index-tl-button-brokers">
-              <div class="index-tl-button-container">
-                <h3>For Brokers</h3>
-                <span class="index-tl-description"
-                  >The best way to reach qualified carriers and get your freight
-                  covered efficiently and reliably</span
-                ><span class="index-tl-navigation"
-                  ><a
-                    data-mpevent="1010"
-                    href="/truckloads/broker-load-board/"
-                    class="default-button"
-                    >Post Freight</a
-                  ></span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="index-tl-art index-tl-art-carriers">
-            <div class="index-tl-mobile">
-              <img
-                class="index-tl-mobile-carriers"
-                src="/assets/img/index/tl-mobile-carriers@2x.png"
-                alt=""
-              />
-            </div>
-            <div class="index-tl-web">
-              <img
-                class="index-tl-web-brokers"
-                src="/assets/img/index/tl-web-brokers@2x.png"
-                alt=""
-              /><img
-                class="index-tl-web-carriers"
-                src="/assets/img/index/tl-web-carriers@2x.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fullwidth core-elements index-opinion-box opinion-box">
-        <div class="opinion-tab">
-          <div class="opinion-items">
-            <div class="opinion-item">
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  Best app, recommend. Every driver gets it at orientation.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">PAM Transport</div>
-                  <div class="opinion-store">— Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  ...this is one of the best mobile loadboards. Keep up the
-                  great work!!
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Martin Negrete</div>
-                  <div class="opinion-store">— TruckLoads for Carriers</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  Don&#039;t often take time to write reviews of apps, but this
-                  one is so deserving in my line of work as a
-                  &quot;trucker&quot;. Some things are just plain good and
-                  exceed expectations and this is one of those things.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Thomas Wynn</div>
-                  <div class="opinion-store">— Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  It gives me everything I need to know about a load. I look at
-                  it every day – one of the best load boards I’ve seen in a
-                  while.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Owner operator</div>
-                  <div class="opinion-store">— TruckLoads for Carriers</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  I&#039;m a new truck driver so I especially find Trucker Path
-                  very helpful. It&#039;s an actual Trip planning/routing app.
-                  They show truck stops on your route, rest areas, scales; they
-                  even give you the truck entrances!
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">K Douglas</div>
-                  <div class="opinion-store">- Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  Best app, recommend. Every driver gets it at orientation.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">PAM Transport</div>
-                  <div class="opinion-store">— Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  ...this is one of the best mobile loadboards. Keep up the
-                  great work!!
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Martin Negrete</div>
-                  <div class="opinion-store">— TruckLoads for Carriers</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  Don&#039;t often take time to write reviews of apps, but this
-                  one is so deserving in my line of work as a
-                  &quot;trucker&quot;. Some things are just plain good and
-                  exceed expectations and this is one of those things.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Thomas Wynn</div>
-                  <div class="opinion-store">— Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  It gives me everything I need to know about a load. I look at
-                  it every day – one of the best load boards I’ve seen in a
-                  while.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Owner operator</div>
-                  <div class="opinion-store">— TruckLoads for Carriers</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  I&#039;m a new truck driver so I especially find Trucker Path
-                  very helpful. It&#039;s an actual Trip planning/routing app.
-                  They show truck stops on your route, rest areas, scales; they
-                  even give you the truck entrances!
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">K Douglas</div>
-                  <div class="opinion-store">- Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  Best app, recommend. Every driver gets it at orientation.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">PAM Transport</div>
-                  <div class="opinion-store">— Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  ...this is one of the best mobile loadboards. Keep up the
-                  great work!!
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Martin Negrete</div>
-                  <div class="opinion-store">— TruckLoads for Carriers</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  Don&#039;t often take time to write reviews of apps, but this
-                  one is so deserving in my line of work as a
-                  &quot;trucker&quot;. Some things are just plain good and
-                  exceed expectations and this is one of those things.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Thomas Wynn</div>
-                  <div class="opinion-store">— Trucker Path app</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  It gives me everything I need to know about a load. I look at
-                  it every day – one of the best load boards I’ve seen in a
-                  while.
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">Owner operator</div>
-                  <div class="opinion-store">— TruckLoads for Carriers</div>
-                </div>
-              </div>
-              <div class="opinion-item-content">
-                <div class="opinion-text">
-                  I&#039;m a new truck driver so I especially find Trucker Path
-                  very helpful. It&#039;s an actual Trip planning/routing app.
-                  They show truck stops on your route, rest areas, scales; they
-                  even give you the truck entrances!
-                  <img
-                    src="/assets/img/index/opinion-quote-1.svg"
-                    class="option-quote option-quote_1"
-                  /><img
-                    src="/assets/img/index/opinion-quote-2.svg"
-                    class="option-quote option-quote_2"
-                  />
-                </div>
-                <div>
-                  <div class="opinion-author">K Douglas</div>
-                  <div class="opinion-store">- Trucker Path app</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="navigation-slideleft"></div>
-          <div class="navigation-slideright"></div>
-        </div>
-        <div class="paginator"></div>
       </div>
       <div class="hbspt-form-bg">
         <div class="hbspt-form-container" id="hbspt-form-container">
@@ -35774,68 +36202,19 @@
           </svg>
           <div class="split"></div>
         </div>
-      </div>
-      <div
-        class="fullwidth core-elements grey-content press-box index-press-box"
-      >
-        <div class="container_10">
-          <div class="feature-in">Featured in</div>
-          <div class="press-native-container">
-            <div class="item-containers">
-              <div class="item-group">
-                <span class="item logo-1"></span
-                ><span class="item logo-2"></span
-                ><span class="item logo-3"></span
-                ><span class="item logo-4"></span
-                ><span class="item logo-5"></span
-                ><span class="item logo-1"></span
-                ><span class="item logo-2"></span
-                ><span class="item logo-3"></span
-                ><span class="item logo-4"></span
-                ><span class="item logo-5"></span
-                ><span class="item logo-1"></span
-                ><span class="item logo-2"></span
-                ><span class="item logo-3"></span
-                ><span class="item logo-4"></span
-                ><span class="item logo-5"></span>
-              </div>
-              <div class="item-group">
-                <span class="item logo-6"></span
-                ><span class="item logo-7"></span
-                ><span class="item logo-8"></span
-                ><span class="item logo-9"></span
-                ><span class="item logo-10"></span
-                ><span class="item logo-6"></span
-                ><span class="item logo-7"></span
-                ><span class="item logo-8"></span
-                ><span class="item logo-9"></span
-                ><span class="item logo-10"></span
-                ><span class="item logo-6"></span
-                ><span class="item logo-7"></span
-                ><span class="item logo-8"></span
-                ><span class="item logo-9"></span
-                ><span class="item logo-10"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fullwidth core-elements index-support">
-        <div class="container_10">
-          <span class="icon-question"></span>
-          <div class="support-text">
-            <div class="support-caption">Help Center</div>
-            <p>
-              Got questions?
-              <a
-                data-mpevent="1011"
-                href="https://help.truckerpath.com"
-                target="_blank"
-                >Let’s get you moving</a
-              >.
-            </p>
-          </div>
-        </div>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-59796712-1"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "UA-59796712-1");
+        </script>
       </div>
       <div class="footer core-elements">
         <div class="container_10">
@@ -35923,6 +36302,37 @@
             ><a href="/under-construction" class="footer-link"
               >Ambassador Program</a
             >
+          </div>
+        </div>
+      </div>
+      <div class="header-dialog handlerHbsptDialog displayNone">
+        <div id="“hasForm”" class="dialog-warper-footer handlerHbsptWarper">
+          <div class="dialog-header">
+            <span class="dialog-title handlerHbsptDialogTitle">
+              See how Trucker Path’s platform can scale up your trucking company </span
+            ><span class="handlerClose handlerHbsptClose"
+              ><img src="/assets/img/menu-v2/icons-16-line-drop-down.svg"
+            /></span>
+          </div>
+        </div>
+      </div>
+      <div class="header-dialog displayNone handlerHbsptSubmitDialog">
+        <div class="submit-dialog">
+          <div class="submit-content">
+            <div class="submit-icon">
+              <img src="/assets/img/icon-suceess.svg" />
+            </div>
+            <div class="submit-title">Thank you for submitting the form!</div>
+            <div class="submit-subTitle">
+              Our team will get back to you as soon as possible.
+            </div>
+            <div class="submit-footerTips">
+              You will be redirected to the homepage
+            </div>
+            <div class="submit-num handlerHbsptSubmitNum">5</div>
+            <div class="submit-close handlerHbsptSubmitClose">
+              <img src="/assets/img/icon-close.svg" />
+            </div>
           </div>
         </div>
       </div>

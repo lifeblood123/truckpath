@@ -33560,3 +33560,8 @@ form.block .signup__submit {
         box-sizing: border-box;
     }
 }
+.smsbtn-container .btn-el--primary{
+    background-size: 37px 18px!important;
+    background-position: 140px !important;
+    width: 188px;
+}

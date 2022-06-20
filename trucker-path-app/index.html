@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+    <style>
+      body {
+        background: #000;
+      }
+
+      .send-sms_inline {
+        text-align: left;
+        margin: 22px auto 0 !important;
+      }
+
+      .send-sms__heading {
+        font-size: 32px;
+        color: #1d2e42;
+        font-weight: 300;
+      }
+
+      .send-sms__heading_inline {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      .send-sms__heading_dark {
+        color: #000 !important;
+      }
+
+      .send-sms__container {
+        padding: 0 !important;
+        margin-top: 20px !important;
+      }
+
+      .send-sms__container_inline {
+        max-width: 294px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        position: relative !important;
+        height: 50px !important;
+        padding: 0 !important;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+
+      .send-sms__container_inline_animated {
+        animation-fill-mode: both;
+        animation-duration: 0.6s;
+        animation-name: wobble;
+      }
+
+      .send-sms__form {
+        height: 54px;
+      }
+
+      .send-sms__form_animated .send-sms__input {
+        animation-fill-mode: both;
+        animation-duration: 0.6s;
+        animation-name: wobble;
+      }
+
+      @keyframes wobble {
+        from,
+        to {
+          transform: none;
+        }
+
+        15% {
+          transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+
+        30% {
+          transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+
+        45% {
+          transform: translate3d(-4%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+
+        60% {
+          transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+
+        75% {
+          transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+      }
+
+      .send-sms__input {
+        width: 262px !important;
+        height: 50px;
+        margin: 0 4px 0 0 !important;
+      }
+
+      .send-sms__input .field-item-container.in-progress .placeholder {
+        line-height: 18px !important;
+        font-size: 8px !important;
+      }
+
+      .send-sms__input .placeholder,
+      .send-sms__input input {
+        height: 50px !important;
+      }
+
+      .send-sms__input .placeholder {
+        line-height: 49px !important;
+      }
+
+      .send-sms__input_inline {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: 50px;
+        margin: 0 !important;
+      }
+
+      .send-sms__input_inline .field-item-container.in-progress .placeholder {
+        line-height: 18px !important;
+        font-size: 8px !important;
+      }
+
+      .send-sms__input_inline .placeholder,
+      .send-sms__input_inline input {
+        height: 50px !important;
+        padding-left: 20px !important;
+      }
+
+      .send-sms__input_inline input {
+        padding: 0 100px 0 20px !important;
+        width: 100% !important;
+        color: #000 !important;
+      }
+
+      .send-sms__input_inline .placeholder {
+        line-height: 49px !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .send-sms__input_inline .placeholder.has-error {
+        color: #e15656 !important;
+      }
+
+      .send-sms__submit {
+        margin: 0 !important;
+        width: auto !important;
+        padding: 0 !important;
+      }
+
+      .send-sms__submit a {
+        padding: 0 30px;
+        width: auto;
+        height: 50px;
+        line-height: 50px;
+      }
+
+      .send-sms__submit_inline {
+        position: absolute !important;
+        left: auto !important;
+        top: 3px !important;
+        right: 3px !important;
+        z-index: 9 !important;
+        margin: 0 !important;
+        float: none !important;
+        width: auto !important;
+        padding: 0 !important;
+      }
+
+      .send-sms__submit_inline a,
+      .send-sms__submit_inline a:hover {
+        cursor: pointer;
+        box-shadow: none;
+        background: #c7c7c7;
+        padding: 0;
+        line-height: 46px;
+        font-weight: 600;
+        font-size: 14px;
+        width: 94px;
+        height: 44px;
+        text-align: center !important;
+      }
+
+      .send-sms__submit_inline .loader-button-place {
+        width: 32px !important;
+        height: 32px !important;
+        margin-right: 20px !important;
+        margin-top: 6px !important;
+      }
+
+      .send-sms__submit_inline_active a,
+      .send-sms__submit_inline_active a:hover {
+        background: #1688ca;
+      }
+
+      .send-sms__example {
+        margin-top: 4px;
+        font-size: 12px;
+        text-align: left;
+      }
+
+      .send-sms__example_errored {
+        color: #e15656;
+      }
+
+      .send-sms__success {
+        display: none;
+        margin-top: 28px;
+        color: #68c591;
+        font-size: 16px;
+      }
+
+      .send-sms__success img {
+        width: 24px;
+        margin-right: 8px;
+      }
+
+      .send-sms__success_inline {
+        position: absolute;
+        z-index: 9;
+        background: #fff;
+        width: 100%;
+        border-radius: 4px;
+        top: 50px;
+        left: 0;
+        height: 50px;
+        margin: 0;
+        text-align: center;
+        color: #68c591 !important;
+        line-height: 50px;
+        transition: top 0.5s ease;
+      }
+
+      .send-sms__success_inline img {
+        position: relative;
+        top: 4px;
+        width: 24px;
+        margin-right: 8px;
+      }
+
+      .send-sms__success_inline_active {
+        top: 0;
+      }
+
+      .send-sms {
+        margin: 32px auto 44px;
+      }
+
+      .forms input,
+      .forms textarea {
+        border: none;
+      }
+
+      .forms .forms-content {
+        margin: 0 auto;
+        width: 624px;
+        padding: 54px 0;
+        text-align: left;
+      }
+
+      .forms .forms-content h3 {
+        line-height: 1em;
+        text-align: center;
+        font-size: 24px;
+        color: #606060;
+        font-weight: 300;
+        padding: 0 0 36px;
+      }
+
+      .forms .forms-content .fields-box {
+        position: relative;
+        display: block;
+        width: 100%;
+        clear: both;
+      }
+
+      .forms .forms-content .fields-box:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+
+      .forms .forms-content .fields-box .field-sepparator {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 24px;
+      }
+
+      .forms .forms-content .fields-box .field-item {
+        margin: 0 7px 14px;
+        float: left;
+        width: 610px;
+        display: none;
+        position: relative;
+      }
+
+      .forms .forms-content .fields-box .field-item.field-terms {
+        text-align: center;
+      }
+
+      .forms .forms-content .fields-box .field-item.field-hidden {
+        display: none !important;
+      }
+
+      .forms .forms-content .fields-box .field-item.respond-box {
+        display: block;
+        background-color: #fff;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 12px 28px 9px;
+      }
+
+      .forms .forms-content .fields-box .field-item.respond-box h4 {
+        font-size: 16px;
+        font-style: italic;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item.respond-box.respond-success {
+        box-shadow: inset 2px 0 0 0 #68c591;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item.respond-box.respond-success
+        h4 {
+        color: #68c591;
+      }
+
+      .forms .forms-content .fields-box .field-item.respond-box.respond-error {
+        box-shadow: inset 2px 0 0 0 #d0021b;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item.respond-box.respond-error
+        h4 {
+        color: #d0021b;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item.respond-box
+        .respond-list-row {
+        display: block;
+        font-size: 14px;
+        margin: 0 0 7px 30px;
+        position: relative;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item.respond-box
+        .respond-list-row:before {
+        content: "—";
+        position: absolute;
+        left: -22px;
+        color: #8e9baa;
+      }
+
+      .forms .forms-content .fields-box .field-item.field-half {
+        width: 298px;
+      }
+
+      .forms .forms-content .fields-box .field-item.field-text {
+        display: block !important;
+      }
+
+      .forms .forms-content .fields-box .field-item.field-button {
+        display: block;
+        padding-top: 10px;
+        text-align: center;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item.field-button
+        .default-button {
+        margin: 0 auto;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item.field-button
+        .loader-button-place {
+        display: block;
+        margin: 0 auto;
+        width: 48px;
+        height: 48px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        background-image: url(/assets/img/loader-greybg-64.gif);
+      }
+
+      .forms .forms-content .fields-box .field-item .field-item-container {
+        position: relative;
+        display: block;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container
+        .placeholder,
+      .forms .forms-content .fields-box .field-item .field-item-container input,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container
+        select,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container
+        textarea {
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      .forms .forms-content .fields-box .field-item .field-item-container input,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container
+        select,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container
+        textarea {
+        z-index: 9;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        background-color: transparent;
+        padding: 0 20px 0 28px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container
+        .placeholder {
+        box-sizing: border-box;
+        line-height: 3.6em;
+        padding: 0 0 0 28px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 6;
+        color: #8e9baa;
+        background-color: #fff;
+        display: block;
+        box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #c7c7c7;
+        overflow: hidden;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container
+        .placeholder
+        .required {
+        position: relative;
+        margin-left: 5px;
+        color: #d0021b !important;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.readonly {
+        background-color: #f8f8f8;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.readonly
+        .placeholder {
+        box-shadow: inset 0 1px 0 0 #fff !important;
+        background-color: #f8f8f8 !important;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.select,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.select
+        .placeholder,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.select
+        select {
+        height: 60px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.select
+        select {
+        opacity: 0;
+        border: none;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.select
+        .show-value {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 17px;
+        padding-left: 28px;
+        background-image: url(https://truckerpath.com/wp-content/uploads/2022/06/select-arrow@2x.png);
+        background-size: 23px 12px;
+        background-repeat: no-repeat;
+        background-position: 568px 24px;
+      }
+
+      .forms .forms-content .fields-box .field-item .field-item-container.text,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.text
+        .placeholder,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.text
+        input {
+        height: 60px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.textarea,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.textarea
+        .placeholder,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.textarea
+        textarea {
+        height: 160px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.textarea
+        textarea {
+        resize: none;
+        padding-top: 17px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.double-tumbler-container {
+        width: 50%;
+        height: 60px;
+        float: left;
+        position: relative;
+        display: block;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.double-tumbler-container
+        label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #8e9baa;
+        box-sizing: border-box;
+        padding-top: 16px;
+        cursor: pointer;
+        -webkit-border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        -moz-border-radius-bottomright: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: 1px solid #c7c7c7;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.double-tumbler-container
+        input.double-tumbler {
+        display: none;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.double-tumbler-container
+        input.double-tumbler:checked
+        + label {
+        border: none;
+        background: #1d87c5;
+        background: linear-gradient(to bottom, #1d87c5 0, #4ba7dc 66%);
+        color: #fff;
+        padding-top: 17px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.double-tumbler-container
+        input.double-tumbler:disabled
+        + label {
+        background-color: #f6f6f6;
+        color: #c7c7c7;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.double-tumbler-container:first-child
+        label {
+        -webkit-border-top-right-radius: 0;
+        -webkit-border-bottom-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        -moz-border-radius-bottomright: 0;
+        -webkit-border-top-left-radius: 4px;
+        -webkit-border-bottom-left-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-bottomleft: 4px;
+        border-radius: 4px 0 0 4px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.in-progress
+        .placeholder {
+        line-height: 2.2em;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.in-progress
+        .placeholder
+        .required {
+        margin-left: 2px;
+      }
+
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.in-progress
+        .placeholder,
+      .forms
+        .forms-content
+        .fields-box
+        .field-item
+        .field-item-container.in-progress
+        .placeholder
+        * {
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .forms .forms-content .fields-box.block .default-button.submit {
+        background: #c7c7c7;
+        box-shadow: inset 0 -2px 0 0 #aeaeae;
+      }
+      .form-submit {
+        display: inline-block;
+        text-decoration: none;
+        border-radius: 4px;
+        overflow: hidden;
+        color: #fff;
+      }
+      .send-sms__submit_inline_active a, .send-sms__submit_inline_active a:hover {
+    background: #1688CA;
+}
+    </style>
+  </head>
+  <body>
+    <div class="send-sms send-sms_inline forms">
+      <div class="send-sms__heading_inline">Send me the link to install</div>
+      <div class="send-sms__container_inline forms-content">
+        <form
+          id="sms-form-inline"
+          action="/api/sms/truckerpath-app"
+          class="fields-box block"
+        >
+          <div class="fieldset">
+            <div
+              class="field-item send-sms__input_inline required"
+              style="display: block"
+            >
+              <span class="field-item-container text"
+                ><input type="text" name="phone" /><span class="placeholder"
+                  >Phone Number</span
+                ></span
+              >
+            </div>
+          </div>
+          <div class="fieldset fieldset-last">
+            <div class="field-item field-button send-sms__submit_inline">
+              <a href="#submit" class="default-button form-submit">SEND SMS</a
+              ><span class="button-loader"></span>
+            </div>
+          </div>
+        </form>
+        <div class="send-sms__success_inline js-sms-success">
+          <img src="https://truckerpath.com/wp-content/uploads/2022/06/checkmark.png" />Check your phone
+        </div>
+      </div>
+    </div>
+    <script>
+
+
+
+var forms = function() {
+    forms.$forms = $(".forms"),
+    forms.callbacks = {
+        success: null,
+        error: null
+    },
+    forms.$forms.each(forms.initForm),
+    forms.alwaysWatch()
+};
+forms.var = {
+    focusCheckSelector: ".field-item-container.text input, .field-item-container.textarea textarea",
+    selectSelector: ".field-item-container.select select",
+    formSelector: "form.fields-box",
+    submitSelector: "form.fields-box .submit",
+    inprogressClass: "in-progress",
+    form: ".fields-box",
+    itemSelect: ".field-item",
+    itemSelectException: ":not(.field-button)",
+    type: {
+        select: {
+            selector: "select",
+            classContainer: "select",
+            elementView: "<span class='show-value'></span>"
+        },
+        text: {
+            selector: ":text",
+            classContainer: "text",
+            element: "<input type='text' />"
+        },
+        textarea: {
+            selector: "textarea",
+            classContainer: "textarea",
+            element: "<textarea></textarea>"
+        },
+        doubletumbler: {
+            selector: "double-tumbler:radio",
+            classContainer: "double-tumbler-container",
+            label: "<label></label>"
+        }
+    },
+    newCoreElement: "<span class='field-item-container'></span>",
+    placeholderElement: "<span class='placeholder'></span>",
+    requiredElement: "<span class='required'>*</span>",
+    loaderButtonPlace: "<span class='loader-button-place'></span>",
+    respondBox: "<div class='field-item respond-box'></div>",
+    respondTitle: "<h4></h4>",
+    respondMessage: "<span class='respond-list-row'></span>"
+},
+forms.alwaysWatch = function() {
+    $(document).on("focusin", forms.var.focusCheckSelector, forms.checkFocusIn),
+    $(document).on("focusout", forms.var.focusCheckSelector, forms.checkFocusOut),
+    $(document).on("change", forms.var.selectSelector, forms.checkSelect),
+    $(document).on("submit", forms.var.formSelector, forms.submitHandler),
+    $(document).on("click", forms.var.submitSelector, forms.submitByClick)
+}
+,
+forms.submitHandler = function() {
+    return forms.submit.apply(this, arguments)
+}
+,
+forms.submit = function() {
+    var e = $(this)
+      , r = $(".default-button.submit", e);
+    if (e.hasClass("block"))
+        return !1;
+    var s = e.attr("action")
+      , o = e.attr("method") || "post"
+      , t = e.serialize();
+    return $.ajax({
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+        },
+        type: o,
+        url: s,
+        dataType: "json",
+        data: t,
+        beforeSend: function() {
+            forms.loaderToggle(e),
+            r.hide()
+        }
+    }).success(function(r) {
+        return r["success-address"] ? (forms.redirectTo(r["success-address"]),
+        !1) : e.data("success-address") ? (forms.redirectTo(e.data("success-address")),
+        !1) : (e.find(".field-item").hide(),
+        forms.loaderToggle(e),
+        forms.showRespond(e, r),
+        void (forms.callbacks.success && forms.callbacks.success()))
+    }).error(function(s) {
+        r.show(),
+        forms.loaderToggle(e),
+        forms.showRespond(e, s.responseJSON),
+        forms.callbacks.error && forms.callbacks.error()
+    }),
+    !1
+}
+,
+forms.on = function(e, r) {
+    switch (e) {
+    case "success":
+        forms.callbacks.success = r;
+    case "error":
+        forms.callbacks.error = r
+    }
+}
+,
+forms.redirectTo = function(e) {
+    window.location = e
+}
+,
+forms.showRespond = function(e, r) {
+    switch ($(".respond-box", e).remove(),
+    $respondBox = $(forms.var.respondBox).addClass("respond-" + r.status),
+    $fields = $(".field-item", e),
+    forms.showRespondMessage($respondBox, "respondTitle", r.title),
+    typeof r.api_errors) {
+    case "object":
+        for (var s in r.api_errors) {
+            var o = r.api_errors[s];
+            forms.showRespondMessage($respondBox, "respondMessage", o.text)
+        }
+        break;
+    default:
+        forms.showRespondMessage($respondBox, "respondMessage", r.message)
+    }
+    $respondBox.prependTo(e),
+    $.scrollTo($respondBox, 1e3, {
+        offset: -100
+    })
+}
+,
+forms.showRespondMessage = function(e, r, s) {
+    $(forms.var[r]).text(s).appendTo(e)
+}
+,
+forms.loaderToggle = function(e) {
+    $buttonContainer = $(".field-item.field-button", e),
+    $button = $(".default-button.submit", $buttonContainer),
+    $loader = $(".loader-button-place", $buttonContainer),
+    $loader.length ? $loader.remove() : ($loader = $(forms.var.loaderButtonPlace),
+    $loader.appendTo($buttonContainer))
+}
+,
+forms.submitByClick = function() {
+    return $(this).parents(forms.var.formSelector).submit(),
+    !1
+}
+,
+forms.checkSelect = function() {
+    var e = $(this).parent();
+    e.addClass(forms.var.inprogressClass);
+    var r = e.find(".show-value")
+      , s = $(this).find('option[value="' + $(this).val() + '"]').text();
+    r.text(s)
+}
+,
+forms.checkFocusIn = function() {
+    var e = $(this).parent();
+    if (e.hasClass("readonly"))
+        return !1;
+    e.addClass(forms.var.inprogressClass)
+}
+,
+forms.checkFocusOut = function() {
+    var e = $(this).parent();
+    forms.checkFocusContent($(this)) ? e.addClass(forms.var.inprogressClass) : e.removeClass(forms.var.inprogressClass)
+}
+,
+forms.checkFocusContent = function(e) {
+    return !!e.val()
+}
+,
+forms.initForm = function() {
+    var e = $(this).find(forms.var.form);
+    $(forms.var.itemSelect, e).filter(forms.var.itemSelectException).each(forms.initField)
+}
+,
+forms.initField = function() {
+    var e = $(this)
+      , r = e.find(":text,select,textarea,.double-tumbler:radio");
+    if (r.length < 1)
+        return !1;
+    forms.createField(e, r)
+}
+,
+forms.createField = function(e, r) {
+    var s = forms.checkType(r)
+      , o = forms.var.type[s]
+      , t = r.attr("name")
+      , a = r.attr("id")
+      , n = "readonly" == r.attr("readonly")
+      , l = r.attr("placeholder")
+      , c = !!r.hasClass("required")
+      , i = $(forms.var.newCoreElement).addClass(o.classContainer)
+      , f = $(forms.var.placeholderElement).text(l);
+    if (n && i.addClass("readonly"),
+    c) {
+        i.addClass("required");
+        var d = $(forms.var.requiredElement);
+        f.append(d)
+    }
+    switch (s) {
+    case "select":
+        var m = forms.copySelect(r);
+        m.attr("name", t);
+        var u = $(forms.var.type[s].elementView);
+        if (r.val()) {
+            var p = r.find('option[value="' + r.val() + '"]').text();
+            u.text(p),
+            i.addClass(forms.var.inprogressClass)
+        }
+        i.append(u).append(m).append(f).replaceAll(r);
+        break;
+    case "doubletumbler":
+        ;r.each(function(e) {
+            var r = t + e
+              , o = $(this).val()
+              , a = i.clone()
+              , n = $(this).clone().attr("id", r)
+              , l = $(forms.var.type[s].label).attr("for", r).text(o);
+            a.append(n).append(l).replaceAll($(this))
+        });
+        break;
+    default:
+        var m = $(o.element);
+        m.attr("name", t),
+        a && m.attr("id", a),
+        n && m.prop("readonly", "readonly"),
+        i.append(m).append(f).replaceAll(r)
+    }
+    e.show(),
+    forms.autofill(t)
+}
+,
+forms.copySelect = function(e) {
+    return e.clone().removeAttr("placeholder").removeAttr("class").removeAttr("name")
+}
+,
+forms.checkType = function(e) {
+    return e.filter("select").length ? "select" : e.filter("textarea").length ? "textarea" : e.filter(":text").length ? "text" : e.filter(".double-tumbler:radio").length ? "doubletumbler" : void 0
+}
+,
+forms.autofill = function(e) {
+    prefill = forms.readhash(e),
+    prefill && $("input:text[name='" + e + "']").val(decodeURIComponent(prefill)).trigger("change").each(forms.checkFocusOut)
+}
+,
+forms.readhash = function(e) {
+    if (!window.location.hash)
+        return !1;
+    var r, s = window.location.hash.split("#")[1], o = s.split("&");
+    for (var t in o)
+        if (r = o[t].split("="),
+        r[0].startsWith("fill-form-") && r[0].substr(10) === e)
+            return r[1];
+    return !1
+}
+,
+forms.extension = {};
+
+
+var smsFormInline = function() {
+    smsFormInline.$form = $("#sms-form-inline"),
+    smsFormInline.$input = $('input[name="phone"]', smsFormInline.$form),
+    smsFormInline.$submit = $(".form-submit", smsFormInline.$form),
+    smsFormInline.placeholder = smsFormInline.$input.next().text(),
+    smsFormInline.errorText = "Wrong format",
+    smsFormInline.$success = $(".js-sms-success"),
+    smsFormInline.$form.on("keyup", smsFormInline.reset),
+    smsFormInline.$submit.on("click", forms.submit)
+};
+smsFormInline.reset = function() {
+    smsFormInline.$input.val() ? smsFormInline.$submit.parent().addClass("send-sms__submit_inline_active") : smsFormInline.$submit.parent().removeClass("send-sms__submit_inline_active"),
+    smsFormInline.$input.next().removeClass("has-error").text(smsFormInline.placeholder)
+}
+,
+smsFormInline.handleError = function(s) {
+    smsFormInline.$form.parent().addClass("send-sms__container_inline_animated"),
+    forms.loaderToggle(smsFormInline.$form),
+    smsFormInline.$submit.show(),
+    s && smsFormInline.$input.next().addClass("has-error").text(smsFormInline.errorText),
+    setTimeout(function() {
+        smsFormInline.$form.parent().removeClass("send-sms__container_inline_animated")
+    }, 600)
+}
+,
+smsFormInline.handleSuccess = function(s) {
+    smsFormInline.$success.addClass("send-sms__success_inline_active")
+}
+,
+forms.submit = function() {
+    if (0 === smsFormInline.$input.val().length)
+        return smsFormInline.handleError(),
+        !1;
+    var s = (smsFormInline.$form.attr("action"),
+    smsFormInline.$form.attr("method"),
+    smsFormInline.$form.serializeArray())
+      , n = /^(\+(\d+)\s+)?(\d+)$/g.exec(s[0].value);
+    if (!n)
+        return void smsFormInline.handleError();
+    var e = n[2] || "1"
+      , m = n[3];
+    return $.ajax({
+        type: "post",
+        url: "https://api.truckerpath.com/tp/user/send/invitation/code?areacode=" + e + "&codeType=TP_OWE&phoneNo=" + m,
+        beforeSend: function() {
+            forms.loaderToggle(smsFormInline.$form),
+            smsFormInline.$submit.hide()
+        }
+    }).success(smsFormInline.handleSuccess).error(smsFormInline.handleError),
+    !1
+}
+;
+window.addEventListener('DOMContentLoaded', (event) => {
+    smsFormInline();
+});
+
+
+    </script>
+  </body>
+</html>
