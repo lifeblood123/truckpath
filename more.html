@@ -1,511 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .option-press h1 {
-            font-size: 32px;
-            line-height: 44px;
-            color: #222
-        }
+      .option-press h1 {
+        font-size: 32px;
+        line-height: 44px;
+        color: #222;
+      }
 
-        .option-press h2 {
-            font-size: 28px;
-            line-height: 40px;
-            padding-bottom: 8px;
-            color: #222
-        }
+      .option-press h2 {
+        font-size: 28px;
+        line-height: 40px;
+        padding-bottom: 8px;
+        color: #222;
+      }
 
-        .option-press p,
-        .option-press p * {
-            font-size: 18px;
-            line-height: 28px;
-            color: #222
-        }
+      .option-press p,
+      .option-press p * {
+        font-size: 18px;
+        line-height: 28px;
+        color: #222;
+      }
 
-        .option-press p a {
-            color: #1375AE
-        }
+      .option-press p a {
+        color: #1375ae;
+      }
 
-        .option-press .bgTitle {
-            position: relative;
-            height: 140px;
-            padding: 48px 0;
-            box-sizing: border-box;
-            margin-bottom: 28px;
-            background: linear-gradient(to right, #dbe884 0, #8dbae5 100%)
-        }
+      .option-press .bgTitle {
+        position: relative;
+        height: 140px;
+        padding: 48px 0;
+        box-sizing: border-box;
+        margin-bottom: 28px;
+        background: linear-gradient(to right, #dbe884 0, #8dbae5 100%);
+      }
 
-        .option-press .bgTitle__pattern {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: url(/assets/img/press/bg.png) center repeat-x;
-            background-size: 400px 140px
+      .option-press .bgTitle__pattern {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/assets/img/press/bg.png) center repeat-x;
+        background-size: 400px 140px;
+      }
+
+      .option-press .bgTitle h1 {
+        position: relative;
+      }
+
+      .option-press .wrapper_content {
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 16px;
+      }
+
+      .option-press .pressList__item {
+        position: relative;
+        display: block;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        text-align: center;
+        padding: 0 28px;
+        margin-bottom: 24px;
+        box-sizing: border-box;
+        top: 0;
+        transition: all 0.2s;
+        overflow: hidden;
+        width: 100%;
+        height: 228px;
+      }
+
+      .option-press .pressList__item:hover {
+        text-decoration: none;
+        top: -6px;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.07);
+      }
+
+      .option-press .pressList__item:hover .pressList__item__title {
+        text-decoration: underline;
+      }
+
+      .option-press .pressList__item__image {
+        margin: 32px 0 16px;
+        width: 184px;
+      }
+
+      .option-press .pressList__item__date,
+      .option-press .pressList__item__title {
+        display: block;
+        z-index: 8;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        padding: 0 5%;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      .option-press .pressList__item__title {
+        top: 144px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        max-height: 48px;
+        overflow: hidden;
+        color: #222;
+      }
+
+      .option-press .pressList__item__date {
+        top: auto;
+        bottom: 8px;
+      }
+
+      .option-press .pressList__item__date,
+      .option-press .pressList__item__date * {
+        color: #999;
+        font-size: 10px;
+        text-transform: uppercase;
+        line-height: 20px;
+      }
+
+      .option-press .pressList__item_template {
+        display: none;
+      }
+
+      .option-press .pressList__item_cover {
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+      }
+
+      .option-press .pressList__item_cover .pressList__item__date,
+      .option-press .pressList__item_cover .pressList__item__title {
+        color: #fff;
+      }
+
+      .option-press .pressList__item__shadow {
+        position: absolute;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        top: auto;
+        left: 0;
+        z-index: 6;
+        background: linear-gradient(
+          to bottom,
+          rgba(34, 34, 34, 0) 0,
+          rgba(34, 34, 34, 0.4) 32%,
+          rgba(34, 34, 34, 0.6) 100%
+        );
+      }
+
+      .option-press .showMore {
+        position: relative;
+        margin-bottom: 32px;
+      }
+
+      .option-press .showMore__button {
+        width: 100%;
+        height: 56px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background-color: #f7f7f7;
+        border: 1px solid #d9d9d9;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 32px;
+        text-align: center;
+        padding: 12px 0;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        color: #222;
+      }
+
+      .option-instapay-new .btn,
+      .option-what-is-factoring .btn,
+      .tlbButton {
+        transition: background-color 0.3s ease-out;
+        box-sizing: border-box;
+      }
+
+      .option-press .showMore__button:hover {
+        background-color: #ececec;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.07);
+      }
+
+      .option-press .showMore__loader {
+        position: absolute;
+        margin-left: 50%;
+        left: -16px;
+        top: 12px;
+        width: 32px;
+        height: 32px;
+        display: none;
+      }
+
+      .option-press .showMore.showMore_loading .showMore__button {
+        visibility: hidden;
+      }
+
+      .option-press .showMore.showMore_loading .showMore__loader {
+        display: block;
+      }
+
+      .option-press .pressTags {
+        text-align: center;
+        padding-bottom: 24px;
+      }
+
+      .option-press .pressTags,
+      .option-press .pressTags * {
+        font-size: 16px;
+        color: #222;
+      }
+
+      .option-press .pressTags a,
+      .option-press .pressTags span {
+        margin: 0 14px;
+      }
+
+      .option-press .pressTags span {
+        color: #6c7580;
+      }
+
+      .option-press .pressTags a:hover {
+        color: #222;
+      }
+
+      .option-press .pressContentBlock {
+        padding-bottom: 48px;
+      }
+
+      .option-press .pressContentBlock .pressKitButton {
+        margin-top: 11px;
+      }
+
+      .option-press .pressKitButton {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 305px;
+        height: 60px;
+        border: 1px solid #222;
+        border-radius: 4px;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 12px 20px 12px 67px;
+        box-sizing: border-box;
+        color: #222;
+      }
+
+      .option-press .pressKitButton span {
+        display: block;
+        font-size: 10px;
+        line-height: 12px;
+        color: #999;
+        text-transform: uppercase;
+      }
+
+      .option-press .pressKitButton:hover {
+        text-decoration: none;
+        color: #222;
+      }
+
+      .option-press .pressKitButton:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 13px;
+      }
+
+      .option-press .pressKitButton_pdf:before {
+        width: 30px;
+        height: 33px;
+        left: 20px;
+        background: url(/assets/img/press/icon-pdf.png) no-repeat;
+        background-size: cover;
+      }
+
+      .option-press .pressKitButton_dropbox:before {
+        width: 36px;
+        height: 34px;
+        left: 17px;
+        background: url(/assets/img/press/icon-dropbox.png) no-repeat;
+        background-size: cover;
+      }
+
+      .headerSet .headerSet__header__linkMarker,
+      .headerSet_light .headerSet__header__linkMarker {
+        background-image: url(/assets/svg/icon-header-link.svg);
+      }
+
+      .option-press hr {
+        background-color: #d9d9d9;
+        margin: 0 auto 32px;
+        height: 1px;
+      }
+
+      @media (min-width: 737px) {
+        .option-press .top-space {
+          height: 108px;
         }
 
         .option-press .bgTitle h1 {
-            position: relative
+          text-align: center;
         }
 
         .option-press .wrapper_content {
-            position: relative;
-            margin: 0 auto;
-            padding-bottom: 16px
+          width: 776px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .option-press .pressList {
+          position: relative;
+          clear: both;
+        }
+
+        .option-press .pressList:after {
+          content: "";
+          display: block;
+          clear: both;
         }
 
         .option-press .pressList__item {
-            position: relative;
-            display: block;
-            border: 1px solid #D9D9D9;
-            border-radius: 4px;
-            text-align: center;
-            padding: 0 28px;
-            margin-bottom: 24px;
-            box-sizing: border-box;
-            top: 0;
-            transition: all .2s;
-            overflow: hidden;
-            width: 100%;
-            height: 228px
-        }
-
-        .option-press .pressList__item:hover {
-            text-decoration: none;
-            top: -6px;
-            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .07)
-        }
-
-        .option-press .pressList__item:hover .pressList__item__title {
-            text-decoration: underline
-        }
-
-        .option-press .pressList__item__image {
-            margin: 32px 0 16px;
-            width: 184px
-        }
-
-        .option-press .pressList__item__date,
-        .option-press .pressList__item__title {
-            display: block;
-            z-index: 8;
-            position: absolute;
-            width: 100%;
-            left: 0;
-            padding: 0 5%;
-            box-sizing: border-box;
-            text-align: center
-        }
-
-        .option-press .pressList__item__title {
-            top: 144px;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-            max-height: 48px;
-            overflow: hidden;
-            color: #222
-        }
-
-        .option-press .pressList__item__date {
-            top: auto;
-            bottom: 8px
-        }
-
-        .option-press .pressList__item__date,
-        .option-press .pressList__item__date * {
-            color: #999;
-            font-size: 10px;
-            text-transform: uppercase;
-            line-height: 20px
-        }
-
-        .option-press .pressList__item_template {
-            display: none
+          float: left;
+          max-width: 376px;
         }
 
         .option-press .pressList__item_cover {
-            background-position: center;
-            background-repeat: no-repeat;
-            border: none
+          background-size: 100% auto;
         }
 
-        .option-press .pressList__item_cover .pressList__item__date,
-        .option-press .pressList__item_cover .pressList__item__title {
-            color: #fff
+        .option-press .pressList__item_top {
+          max-width: none;
+          height: 470px;
         }
 
-        .option-press .pressList__item__shadow {
-            position: absolute;
-            bottom: 0;
-            height: 100px;
-            width: 100%;
-            top: auto;
-            left: 0;
-            z-index: 6;
-            background: linear-gradient(to bottom, rgba(34, 34, 34, 0) 0, rgba(34, 34, 34, .4) 32%, rgba(34, 34, 34, .6) 100%)
+        .option-press .pressList__item_top .pressList__item__title {
+          font-size: 28px;
+          line-height: 40px;
+          top: auto;
+          bottom: 56px;
+          max-height: 80px;
         }
 
-        .option-press .showMore {
-            position: relative;
-            margin-bottom: 32px
+        .option-press .pressList__item_top .pressList__item__date {
+          bottom: 24px;
         }
 
-        .option-press .showMore__button {
-            width: 100%;
-            height: 56px;
-            box-sizing: border-box;
-            border-radius: 4px;
-            background-color: #F7F7F7;
-            border: 1px solid #D9D9D9;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 32px;
-            text-align: center;
-            padding: 12px 0;
-            cursor: pointer;
-            transition: background-color .2s;
-            color: #222
+        .option-press .pressList__item_top .pressList__item__shadow {
+          height: 208px;
         }
 
-        .option-instapay-new .btn,
-        .option-what-is-factoring .btn,
-        .tlbButton {
-            transition: background-color .3s ease-out;
-            box-sizing: border-box
+        .option-press .pressList__item:nth-child(2n) {
+          margin-left: 24px;
+        }
+      }
+
+      @media (max-width: 736px) {
+        .option-press .bgTitle {
+          z-index: -1;
         }
 
-        .option-press .showMore__button:hover {
-            background-color: #ECECEC;
-            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .07)
+        .option-press .bgTitle h1 {
+          padding: 0 24px;
         }
 
-        .option-press .showMore__loader {
-            position: absolute;
-            margin-left: 50%;
-            left: -16px;
-            top: 12px;
-            width: 32px;
-            height: 32px;
-            display: none
+        .option-press .wrapper_content {
+          padding: 0 24px 16px;
         }
 
-        .option-press .showMore.showMore_loading .showMore__button {
-            visibility: hidden
+        .option-press .pressList__item_cover {
+          background-size: 106% auto;
         }
 
-        .option-press .showMore.showMore_loading .showMore__loader {
-            display: block
+        .option-press .product-navigation.press-navigation {
+          position: relative;
+          padding: 15px 24px 12px;
+          background-color: #fff;
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
         }
 
-        .option-press .pressTags {
-            text-align: center;
-            padding-bottom: 24px
+        .option-press
+          .product-navigation.press-navigation
+          .product-navigation-container,
+        .option-press
+          .product-navigation.press-navigation
+          .product-navigation-container
+          * {
+          color: #222;
+          font-size: 16px;
         }
 
-        .option-press .pressTags,
-        .option-press .pressTags * {
-            font-size: 16px;
-            color: #222
+        .option-press
+          .product-navigation.press-navigation
+          .product-navigation-container
+          .product-navigation-title {
+          font-weight: 700;
+          line-height: 24px;
+          float: left;
+          display: block;
+          margin-bottom: 12px;
         }
 
-        .option-press .pressTags a,
-        .option-press .pressTags span {
-            margin: 0 14px
+        .option-press
+          .product-navigation.press-navigation
+          .product-navigation-container
+          .product-navigation-title:hover {
+          text-decoration: none;
         }
 
-        .option-press .pressTags span {
-            color: #6C7580
+        .option-press
+          .product-navigation.press-navigation
+          .product-navigation-container
+          .product-navigation-menu {
+          position: relative;
+          width: 100%;
+          clear: both;
         }
 
-        .option-press .pressTags a:hover {
-            color: #222
+        .option-press
+          .product-navigation.press-navigation
+          .product-navigation-container
+          .product-navigation-menu
+          a,
+        .option-press
+          .product-navigation.press-navigation
+          .product-navigation-container
+          .product-navigation-menu
+          span {
+          text-decoration: none;
+          padding-right: 12px;
+          line-height: 25px;
         }
+      }
 
-        .option-press .pressContentBlock {
-            padding-bottom: 48px
-        }
-
-        .option-press .pressContentBlock .pressKitButton {
-            margin-top: 11px
-        }
-
+      @media (max-width: 736px) and (max-width: 356px) {
         .option-press .pressKitButton {
-            position: relative;
-            display: block;
-            width: 100%;
-            max-width: 305px;
-            height: 60px;
-            border: 1px solid #222;
-            border-radius: 4px;
-            font-size: 18px;
-            line-height: 24px;
-            padding: 12px 20px 12px 67px;
-            box-sizing: border-box;
-            color: #222
+          font-size: 16px !important;
+          padding: 12px 10px 12px 62px !important;
         }
+      }
 
-        .option-press .pressKitButton span {
-            display: block;
-            font-size: 10px;
-            line-height: 12px;
-            color: #999;
-            text-transform: uppercase
+      @media (max-width: 736px) and (max-width: 396px) {
+        .option-press .pressList__item_cover {
+          background-size: 140% auto;
         }
-
-        .option-press .pressKitButton:hover {
-            text-decoration: none;
-            color: #222
-        }
-
-        .option-press .pressKitButton:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 13px
-        }
-
-        .option-press .pressKitButton_pdf:before {
-            width: 30px;
-            height: 33px;
-            left: 20px;
-            background: url(/assets/img/press/icon-pdf.png) no-repeat;
-            background-size: cover
-        }
-
-        .option-press .pressKitButton_dropbox:before {
-            width: 36px;
-            height: 34px;
-            left: 17px;
-            background: url(/assets/img/press/icon-dropbox.png) no-repeat;
-            background-size: cover
-        }
-
-        .headerSet .headerSet__header__linkMarker,
-        .headerSet_light .headerSet__header__linkMarker {
-            background-image: url(/assets/svg/icon-header-link.svg)
-        }
-
-        .option-press hr {
-            background-color: #d9d9d9;
-            margin: 0 auto 32px;
-            height: 1px
-        }
-
-        @media (min-width:737px) {
-            .option-press .top-space {
-                height: 108px
-            }
-
-            .option-press .bgTitle h1 {
-                text-align: center
-            }
-
-            .option-press .wrapper_content {
-                width: 776px;
-                padding-left: 10px;
-                padding-right: 10px
-            }
-
-            .option-press .pressList {
-                position: relative;
-                clear: both
-            }
-
-            .option-press .pressList:after {
-                content: '';
-                display: block;
-                clear: both
-            }
-
-            .option-press .pressList__item {
-                float: left;
-                max-width: 376px
-            }
-
-            .option-press .pressList__item_cover {
-                background-size: 100% auto
-            }
-
-            .option-press .pressList__item_top {
-                max-width: none;
-                height: 470px
-            }
-
-            .option-press .pressList__item_top .pressList__item__title {
-                font-size: 28px;
-                line-height: 40px;
-                top: auto;
-                bottom: 56px;
-                max-height: 80px
-            }
-
-            .option-press .pressList__item_top .pressList__item__date {
-                bottom: 24px
-            }
-
-            .option-press .pressList__item_top .pressList__item__shadow {
-                height: 208px
-            }
-
-            .option-press .pressList__item:nth-child(2n) {
-                margin-left: 24px
-            }
-        }
-
-
-        @media (max-width:736px) {
-            .option-press .bgTitle {
-                z-index: -1
-            }
-
-            .option-press .bgTitle h1 {
-                padding: 0 24px
-            }
-
-            .option-press .wrapper_content {
-                padding: 0 24px 16px
-            }
-
-            .option-press .pressList__item_cover {
-                background-size: 106% auto
-            }
-
-            .option-press .product-navigation.press-navigation {
-                position: relative;
-                padding: 15px 24px 12px;
-                background-color: #fff;
-                box-shadow: 0 0 2px 0 rgba(0, 0, 0, .4)
-            }
-
-            .option-press .product-navigation.press-navigation .product-navigation-container,
-            .option-press .product-navigation.press-navigation .product-navigation-container * {
-                color: #222;
-                font-size: 16px
-            }
-
-            .option-press .product-navigation.press-navigation .product-navigation-container .product-navigation-title {
-                font-weight: 700;
-                line-height: 24px;
-                float: left;
-                display: block;
-                margin-bottom: 12px
-            }
-
-            .option-press .product-navigation.press-navigation .product-navigation-container .product-navigation-title:hover {
-                text-decoration: none
-            }
-
-            .option-press .product-navigation.press-navigation .product-navigation-container .product-navigation-menu {
-                position: relative;
-                width: 100%;
-                clear: both
-            }
-
-            .option-press .product-navigation.press-navigation .product-navigation-container .product-navigation-menu a,
-            .option-press .product-navigation.press-navigation .product-navigation-container .product-navigation-menu span {
-                text-decoration: none;
-                padding-right: 12px;
-                line-height: 25px
-            }
-        }
-
-        @media (max-width:736px) and (max-width:356px) {
-            .option-press .pressKitButton {
-                font-size: 16px !important;
-                padding: 12px 10px 12px 62px !important
-            }
-        }
-
-        @media (max-width:736px) and (max-width:396px) {
-            .option-press .pressList__item_cover {
-                background-size: 140% auto
-            }
-        }
+      }
     </style>
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <!-- <script src="https://www.truckerpath.com/assets/components/jquery/jquery.min.js?70"></script> -->
-</head>
+  </head>
 
-<body class="option-press">
-    <div>
-        <div class="wrapeer wrapper_content">
-            <!-- <div class="pressList" data-url="https://www.truckerpath.com/api/press/releases">
-            </div> -->
-            <div class="pressList" data-url="https://www.truckerpath.com/api/press/featured">
-            </div>
-            <a href="" class="pressList__item pressList__item_template" target="_blank" rel="nofollow"><img src=""
-                    class="pressList__item__image" alt=""><span class="pressList__item__title"></span><span
-                    class="pressList__item__date"></span></a>
-            <div class="showMore">
-                <div class="showMore__button">Show more</div>
-                <img src="http://truckerpath.com/wp-content/uploads/2022/06/loader-whitebg-64.gif" class="showMore__loader"
-                    alt="">
-            </div>
-            <div class="pressTags"><a href="/press/">Featured&nbsp;In</a><a href="/press/media-files/">Media&nbsp;Files</a>
-            </div>
+  <body class="option-press">
+    <div class="product-navigation press-navigation">
+      <div class="product-navigation-container">
+        <a href="/press/" class="product-navigation-title">Press Center</a>
+        <div class="product-navigation-menu">
+          <a href="/press/" class="product-navigation-menu-item">Featured In</a
+          ><a href="/press/releases/" class="product-navigation-menu-item"
+            >Press Releases</a
+          ><a href="/press/media-files/" class="product-navigation-menu-item"
+            >Media Files</a
+          >
         </div>
+      </div>
     </div>
-    
+    <div>
+      <div class="wrapeer wrapper_content">
+        <!-- <div class="pressList" data-url="https://www.truckerpath.com/api/press/releases">
+            </div> -->
+        <div
+          class="pressList"
+          data-url="https://www.truckerpath.com/api/press/featured"
+        ></div>
+        <a
+          href=""
+          class="pressList__item pressList__item_template"
+          target="_blank"
+          rel="nofollow"
+          ><img src="" class="pressList__item__image" alt="" /><span
+            class="pressList__item__title"
+          ></span
+          ><span class="pressList__item__date"></span
+        ></a>
+        <div class="showMore">
+          <div class="showMore__button">Show more</div>
+          <img
+            src="http://truckerpath.com/wp-content/uploads/2022/06/loader-whitebg-64.gif"
+            class="showMore__loader"
+            alt=""
+          />
+        </div>
+        <div class="pressTags">
+          <a href="/press/">Featured&nbsp;In</a
+          ><a href="/press/media-files/">Media&nbsp;Files</a>
+        </div>
+      </div>
+    </div>
+
     <script>
-        var Press = function () {
-            this.loadData = this.loadData.bind(this);
-            this.loadButton = $(".showMore__button"), this.list = $(".pressList"), this.registerHandlers();
-            this.loadData();
+      var scrollMarker = function () {
+          $(window).scrollTop() > 100
+            ? $("body").addClass("option-scrolltop")
+            : $("body").removeClass("option-scrolltop"),
+            void 0 === scrollMarker.isSet &&
+              ($(window).on("scroll", scrollMarker), (scrollMarker.isSet = !0));
+        },
+        moveToTop = function () {
+          ($element = $(".move-to-top")),
+            moveToTop.check(),
+            $(window).on("scroll", moveToTop.check),
+            $element.on("click", moveToTop.scrollToTop);
         };
-        Press.prototype.registerHandlers = function () {
-            this.loadButton.on("click", this.loadMore.bind(this))
-        };
-        Press.prototype.loadData = function () {
-            $.ajax({
-                method: "GET",
-                url: this.list.data("url"),
-                data: {
-                    skip: this.getLoadedPosts()
-                },
-                success: this.handlePosts.bind(this)
-            })
-        };
-        Press.prototype.loadMore = function (t) {
-            this.loadButton.hasClass("showMore_loading") || (this.loadButton.parent().addClass("showMore_loading"),
-            this.loadData());
-        };
-        Press.prototype.getLoadedPosts = function () {
-            return $(".pressList__item").not(".pressList__item_template").length
-        };
-        Press.prototype.handlePosts = function (t) {
-            t.items.forEach(function (t) {
-                var s = this.getTemplate();
-                var imgur = "https://www.truckerpath.com/assets/img/partners/" + t.mediabrand.logo;
-                s.prop("href", t.link);
-                s.find(".pressList__item__title").text(t.title);
-                s.find(".pressList__item__image").remove();
-                s.find(".pressList__item__date").empty();
-                s.prepend($('<img class="pressList__item__image" src="" alt="" />').prop("src",
-                    './press-fleet-owner.png'
-                ));
-                s.find(".pressList__item__date").text(t.human_date);
-                $(".pressList").append(s), s.removeClass("pressList__item_template")
-            }.bind(this));
-            this.loadButton.parent().removeClass("showMore_loading");
-            if (t.total == this.getLoadedPosts()) {
-                debugger;
-            }
-            t.total == this.getLoadedPosts() && this.loadButton.hide();
-        };
-        Press.prototype.getTemplate = function () {
-            return $(".pressList__item_template").clone()
-        };
-        document.addEventListener("DOMContentLoaded",()=>{
-            new Press();
+      (moveToTop.check = function () {
+        $(window).scrollTop() >= 900
+          ? $element.removeClass("hide")
+          : $element.addClass("hide");
+      }),
+        (moveToTop.scrollToTop = function () {
+          $.scrollTo(0, 1e3);
         });
+
+      var Press = function () {
+        this.loadData = this.loadData.bind(this);
+        (this.loadButton = $(".showMore__button")),
+          (this.list = $(".pressList")),
+          this.registerHandlers();
+        this.loadData();
+      };
+      Press.prototype.registerHandlers = function () {
+        this.loadButton.on("click", this.loadMore.bind(this));
+      };
+      Press.prototype.loadData = function () {
+        $.ajax({
+          method: "GET",
+          url: this.list.data("url"),
+          data: {
+            skip: this.getLoadedPosts(),
+          },
+          success: this.handlePosts.bind(this),
+        });
+      };
+      Press.prototype.loadMore = function (t) {
+        this.loadButton.hasClass("showMore_loading") ||
+          (this.loadButton.parent().addClass("showMore_loading"),
+          this.loadData());
+      };
+      Press.prototype.getLoadedPosts = function () {
+        return $(".pressList__item").not(".pressList__item_template").length;
+      };
+      Press.prototype.handlePosts = function (t) {
+        t.items.forEach(
+          function (t) {
+            var s = this.getTemplate();
+            var imgur =
+              "https://www.truckerpath.com/assets/img/partners/" +
+              t.mediabrand.logo;
+            s.prop("href", t.link);
+            s.find(".pressList__item__title").text(t.title);
+            s.find(".pressList__item__image").remove();
+            s.find(".pressList__item__date").empty();
+            s.prepend(
+              $('<img class="pressList__item__image" src="" alt="" />').prop(
+                "src",
+                "./press-fleet-owner.png"
+              )
+            );
+            s.find(".pressList__item__date").text(t.human_date);
+            $(".pressList").append(s),
+              s.removeClass("pressList__item_template");
+          }.bind(this)
+        );
+        this.loadButton.parent().removeClass("showMore_loading");
+        if (t.total == this.getLoadedPosts()) {
+          debugger;
+        }
+        t.total == this.getLoadedPosts() && this.loadButton.hide();
+      };
+      Press.prototype.getTemplate = function () {
+        return $(".pressList__item_template").clone();
+      };
+      document.addEventListener("DOMContentLoaded", () => {
+        new Press();
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
