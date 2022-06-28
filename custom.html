@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src="https://truckerpath.com/assets/components/jquery/jquery.min.js?70"></script>
     <!-- <link rel="stylesheet" href="custom.css"> -->
-    <script src="custom.js"></script>
+    <!-- <script src="custom.js"></script> -->
   </head>
 
   <body>
@@ -28,7 +28,6 @@
         color: #0ba1ee;
         text-decoration: underline;
       }
-
       .tp-state-item {
         position: relative;
         width: 210px;
@@ -63,6 +62,15 @@
       .tp-button-content .less {
         display: none;
       }
+
+      .tp-button-container .tp-button-show .more {
+        display: none !important;
+      }
+
+      .tp-button-container .tp-button-show .less {
+        display: inline-block !important;
+      }
+
       .tp-button-content span {
         display: inline-block;
         margin-right: 10px;
@@ -294,7 +302,7 @@
       >
     </div>
     <div class="tp-button-container">
-      <div id="tp-button" class="tp-button-content tp-button-show">
+      <div id="tp-button" class="tp-button-content">
         <span class="more">More</span>
         <span class="less">Less</span>
         <img
@@ -310,24 +318,43 @@
       </div>
     </div>
     <script>
-      function BindByDom() {
-        try {
-          var htmlBtn = document.getElementById("tp-button"); //获取HTMLCollection对象集合
-          //遍历集合，一个一个地设置点击事件
-          htmlBtn.onclick = function () {
-            var classList = document.querySelector("#tp-state-block").classList;
-            // container.
-            if (classList.contains("tp-state-hide")) {
-              classList.remove("tp-state-hide");
-            } else {
-              classList.add("tp-state-hide");
-            }
-          };
-        } catch (error) {}
-      }
-      document.addEventListener("DOMContentLoaded", () => {
-        BindByDom();
-      });
+      // function BindByDom() {
+      //   try {
+      //     var htmlBtn = document.getElementById("tp-button"); //获取HTMLCollection对象集合
+      //     //遍历集合，一个一个地设置点击事件
+      //     htmlBtn.onclick = function () {
+      //       var classList = document.querySelector("#tp-state-block").classList;
+      //       // container.
+      //       if (classList.contains("tp-state-hide")) {
+      //         classList.remove("tp-state-hide");
+      //       } else {
+      //         classList.add("tp-state-hide");
+      //       }
+      //     };
+      //   } catch (error) {}
+      // }
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   BindByDom();
+      // });
+
+      (function () {
+        var buttonDom = document.querySelector("#tp-button");
+        var divDOm = document.querySelector("#tp-state-block");
+        var classList = document.querySelector("#tp-state-block").classList;
+
+        buttonDom.onclick = () => {
+          // console.log(buttonDom.classList.contains('tp-button-content'))
+          if (buttonDom.classList.contains("tp-button-show")) {
+            buttonDom.classList.remove("tp-button-show");
+            // divDOm.classList.remove('tp-state-show')
+            classList.add("tp-state-hide");
+          } else {
+            buttonDom.classList.add("tp-button-show");
+            // divDOm.classList.add('tp-state-show')
+            classList.remove("tp-state-hide");
+          }
+        };
+      })();
     </script>
   </body>
 </html>
