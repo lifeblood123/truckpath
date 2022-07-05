@@ -1283,4 +1283,101 @@
   .dialog-close {
     cursor: pointer;
   }
- 
+ .submit-dialog {
+    transform: translate(-50%,-50%);
+    position: fixed;
+}
+  .submit-dialog {
+    width: 402px;
+    max-width: 80vw;
+    box-sizing: border-box;
+    min-height: 194px;
+    padding: 24px 50px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    border-radius: 8px;
+}
+.submit-icon {
+  height: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.submit-icon img {
+  height: 100%;
+}
+
+.submit-title {
+  margin-top: 10px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #000;
+}
+
+.submit-subTitle {
+  margin-top: 10px;
+  color: #7F8596;
+}
+
+.submit-subTitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.submit-footerTips {
+  margin-top: 32px;
+  color: #DADCE1;
+}
+
+.submit-subTitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+
+.submit-close, .submit-num {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.submit-num {
+  right: -2px;
+  line-height: 24px;
+  color: #7F8596;
+}
+
+.dialog-title, .submit-num {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.submit-close {
+  right: -30px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.submit-footerTips, .submit-subTitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+.submit-content {
+  position: relative;
+}
